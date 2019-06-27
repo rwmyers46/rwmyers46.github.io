@@ -1,6 +1,6 @@
 ---
-title: "Bio"
-permalink: /bio/
+title: "ResumeX"
+permalink: /resume/
 ---
 
 <img src="/images/Russell_Myers_ResumeV2.jpg"/>
