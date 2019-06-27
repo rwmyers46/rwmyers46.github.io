@@ -13,7 +13,7 @@ Setup: This post assumes you have an AWS account with your images in an S3 bucke
 
 ##### Step 1 - Instantiate S3 and Rekognition Boto3 Clients:
 
- ```Python
+ ```python
   s3_client = boto3.client('s3')
 
   bucket_name = 'your-bucket-name'
@@ -39,7 +39,7 @@ Unless you would like to modify the Confidence or MaxLabels parameters, the code
 
 In the example below, I also wanted to remove photos containing people. With Rekognition, this task was as simple as adding a `or ('Person' in test_labels)` clause to the conditional statement.
 
-```Python
+```python
 # Generate a test_labels list by loading photos consecutively and capturing Rekognition's response.
 
 animal_list = []
