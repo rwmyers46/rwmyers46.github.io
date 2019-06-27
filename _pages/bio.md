@@ -3,4 +3,4 @@ title: "Bio"
 permalink: /bio/
 ---
 
-<img src="/images/Russell_Myers_ResumeV2.pdf"/>
+<img src="/images/Russell_Myers_ResumeV2.jpg"/>
