@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Russell Myers"
+title                    : "Russell W. Myers"
 title_separator          : "-"
 name                     : "Russell Myers"
 description              : "Data Science Portfolio"
@@ -106,7 +106,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Russell Myers"
+  name             : "Russell W. Myers"
   avatar           : "/images/RWM.jpg"
   bio              : "Data Science Portfolio"
   location         : "Dallas, TX"
@@ -130,6 +130,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "/images/linkedin.jpg"
+      url: "https://www.linkedin.com/in/myersrussell/"
 
 # Site Footer
 footer:
