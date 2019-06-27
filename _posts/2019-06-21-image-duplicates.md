@@ -19,6 +19,18 @@ The `Image_Optimizer` function's core advantage is avoiding computationally inte
 
 The `filtered_dict` of {image_dimensions : file_names list} represents a grouped list of images with identical dimensions. This dictionary is returned so that the `Check_Duplicates` function only need compare images of the same size to each other.
 
+'''python
+import numpy as np
+import random
+import string
+from collections import Counter, defaultdict
+import cv2
+from PIL import Image
+import os
+import itertools as it
+import shutil
+'''
+
 #### Test Results:
 
 * For 846 images, the brute force approach requires processing 357,435 image pairs.
