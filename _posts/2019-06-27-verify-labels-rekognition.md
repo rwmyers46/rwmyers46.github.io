@@ -36,7 +36,7 @@ Next we build a list containing those labels that Rekognition is associating wit
 
 Unless you would like to modify the Confidence or MaxLabels parameters, the code below with handle the rest. The script requires user confirmation before deleting the files, but I have yet to find a file mistakenly on deck for deletion.
 
-In the example below, I also wanted to remove photos containing people. With Rekognition, this task was as simple as adding a `or ('Person' in test_labels)` clause to the conditional statement.
+In the example below, I also wanted to remove photos containing people. With Rekognition, this task was as simple as adding a the `('Person' in test_labels)` clause to the conditional statement.
 
 ```python
 # Generate a test_labels list by loading photos consecutively and capturing Rekognition's response.

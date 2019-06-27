@@ -2,10 +2,11 @@
 title: "Optimizing Duplicates Processing"
 date: 2019-06-21
 tags: [data science, image processing, python]
-header:
-  image: "/images/optimizer/eagle.jpg"
 excerpt: "Machine Learning, Data Science"
 ---
+
+<img src="/images/optimizer/eagle.jpg" alt="drawing" height="200"/>
+
 #### Results:
 
 * For 846 images, Image_Optimizer's algorithm only requires processing 2,139 image pairs compared to 357,435 image pairs with a brute force approach.
