@@ -4,7 +4,7 @@ date: 2019-06-27
 tags: [AWS Rekognition, machine learning, boto3]
 header:
   image: "/images/rekognition/photo-pile.jpg"
-excerpt: "Machine Learning, Data Science"
+excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 
 When training a neural network with images downloaded from the web, my experience has been that at least 15% of those photos are not not germane to your label of interest. Verifying image labels with AWS Rekognition is a simple, fast, and inexpensive way to increase model accuracy.
@@ -48,7 +48,6 @@ keyString_list = []
 bad_pics = 0
 
 for img in test_images:
-
     response = rek_client.detect_labels(
         Image={
             'S3Object': {
@@ -58,7 +57,6 @@ for img in test_images:
         },
         MaxLabels = 10,
     )
-
     for label in response['Labels']:
         if label['Confidence'] > 85:
             animal_list.append(label['Name'])
@@ -66,7 +64,6 @@ for img in test_images:
 # creat a set of unique image labels from our test images
 
 test_labels = set(animal_list)
-
 
 # create an object type botocore.paginate.PageIterator from images in s3 bucket:
 
@@ -93,7 +90,6 @@ for page in result:
                     },
                     MaxLabels = 10,
                 )
-
 # append response labels above confidence > 85% to labels_list:
 
                 labels_list = []
@@ -107,7 +103,6 @@ for page in result:
                 if (not labels_list.intersection(test_labels)) or ('Person' in test_labels):
                     s3_client.delete_object(Bucket = bucket_name, Key = keyString)
                     bad_pics += 1
-
             except:
                 print('Bad image:', keyString)
 
