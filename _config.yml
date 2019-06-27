@@ -130,8 +130,8 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
-    - label: "LinkedIn"
-      icon: "fas fa-linkedin-in"
+    - label: " LinkedIn"
+      icon: "fab fa-linkedin-in"
       url: "https://www.linkedin.com/in/myersrussell/"
 
 # Site Footer
