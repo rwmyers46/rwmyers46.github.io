@@ -20,7 +20,7 @@ The `Image_Optimizer` function's core advantage is avoiding computationally inte
 The `filtered_dict` of {image_dimensions : file_names list} represents a grouped list of images with identical dimensions. This dictionary is returned so that the `Check_Duplicates` function only need compare images of the same size to each other.
 
 Python code block:
-'''python
+```python
   import numpy as np
   import random
   import string
@@ -30,7 +30,7 @@ Python code block:
   import os
   import itertools as it
   import shutil
-'''
+```
 
 #### Test Results:
 
