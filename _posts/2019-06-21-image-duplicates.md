@@ -7,9 +7,7 @@ excerpt: "Machine Learning, Data Science"
 
 <img src="/images/optimizer/eagle2.jpg" alt="drawing" height="200"/>
 
-#### Results:
-
-* For 846 images, Image_Optimizer's algorithm only requires processing 2,139 image pairs compared to 357,435 image pairs with a brute force approach.
+* This algorithm only required processing 2,139 image pairs compared to 357,435 pairs with a brute force approach on a test sample of 846 images.
 
 * As less than 1% of the original combinations require further evaluation, the top-level processing efficiency gain is 167x.
 
