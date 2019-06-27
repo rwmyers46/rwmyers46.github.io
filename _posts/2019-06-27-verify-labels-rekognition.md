@@ -6,6 +6,7 @@ header:
   image: "/images/rekognition/photo-pile.jpg"
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
+<img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
 
 When training a neural network with images downloaded from the web, my experience has been that at least 15% of those photos are not not germane to your label of interest. Verifying image labels with AWS Rekognition is a simple, fast, and inexpensive way to increase model accuracy.
 
