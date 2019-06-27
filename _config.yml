@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "Russell Myers"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/RWM.jpg"
   bio              : "Data Science Portfolio"
   location         : "Dallas, TX"
   email            :
