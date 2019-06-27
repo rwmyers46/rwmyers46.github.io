@@ -1,5 +1,5 @@
 ---
-title: "Optimizing Duplicate Images Processing"
+title: "Optimizing Duplicates Processing"
 date: 2019-06-21
 tags: [data science, image processing, python]
 header:
