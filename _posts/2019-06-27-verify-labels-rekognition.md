@@ -1,9 +1,7 @@
 ---
-title: "Label Verification with AWS Rekognition"
+title: "Label Verification with Rekognition"
 date: 2019-06-27
 tags: [AWS Rekognition, machine learning, boto3]
-header:
-  image: "/images/rekognition/photo-pile.jpg"
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 <img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
