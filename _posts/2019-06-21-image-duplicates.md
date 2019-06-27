@@ -5,7 +5,7 @@ tags: [data science, image processing, python]
 excerpt: "Machine Learning, Data Science"
 ---
 
-<img src="/images/optimizer/eagle.jpg" alt="drawing" height="200"/>
+<img src="/images/optimizer/eagle2.jpg" alt="drawing" height="200"/>
 
 #### Results:
 
