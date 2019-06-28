@@ -3,7 +3,7 @@ title: "Optimizing Duplicates Processing"
 date: 2019-06-21
 tags: [data science, image processing, python]
 excerpt: "Time Complexity, Machine Learning, Algorithms"
-usemathjax: true
+mathjax: "true"
 head: <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 
 ---
