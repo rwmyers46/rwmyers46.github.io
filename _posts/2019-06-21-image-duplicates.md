@@ -19,7 +19,6 @@ head: <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 Python's CV2 and OS modules can readily handle null image files; the real challenge lies in avoid duplicate images. To confirm uniqueness not only for newly downloaded images, but also to avoid adding duplicates to our existing image directory, a pairwise comparison of each image is required. The number of comparisons required can be computed using graph theory, treating images as nodes and combinations as edges.
 
 The equation for calculating the number of edges K for a complete, undirected graph with n nodes:
-test
 
 $$K_n = \frac{n*(n - 1)}{2}$$
 

@@ -4,7 +4,7 @@ main:
     url: /blog/
   - title: "Projects"
     url: /projects/
-  - title: "Resume"
+  - title: "Résumé"
     url: /resume/
   # - title: "Sample Posts"
   #   url: /year-archive/
