@@ -6,9 +6,13 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 <img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
 
-When training a neural network with images downloaded from the web, my experience has been that at least 15% of those photos are not not germane to your label of interest. Verifying image labels with AWS Rekognition is a simple, fast, and inexpensive way to increase model accuracy.
+When training a neural network with images downloaded from the web, it is not uncommon for 10-25% of those photos to contain mislabeled categories. Here is one example of what Microsoft's Cognitive Services API returned for the query "wild boar":
 
-Setup: This post assumes you have an AWS account with your images in an S3 bucket and Boto 3 installed.
+<img src="/images/rekognition/wild-boar-movie.jpg"/>
+
+Ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy. Aside from AWS Mechanical Turk, the only other option was manually reviewing 1,000s of images in your training data. AWS Rekognition provides a fast and inexpensive alternative to verify image labels.
+
+Before proceeding, install Boto 3 and separate your images by label in an S3 bucket directory.
 
 ##### Step 1 - Instantiate S3 and Rekognition Boto3 Clients:
 
