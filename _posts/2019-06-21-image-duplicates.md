@@ -17,15 +17,9 @@ head: <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 
 Python's CV2 and OS modules can readily handle null image files; the real challenge lies in avoid duplicate images. To confirm uniqueness not only for newly downloaded images, but also to avoid adding duplicates to our existing image directory, a pairwise comparison of each image is required. The number of comparisons required can be computed using graph theory, treating images as nodes and combinations as edges.
 
-The equation for calculating the number of edges K for a complete, undirected graph with n nodes: K = n(n - 1)/2.
+The equation for calculating the number of edges K for a complete, undirected graph with n nodes:
 
-$$\cos (2\theta)$$
-
-\begin{align}
-\dot{x} & = \sigma(y-x) \\
-\dot{y} & = \rho x - y - xz \\
-\dot{z} & = -\beta z + xy
-\end{align}
+$$K_n = \frac{n*(n - 1)}{2}$$
 
 Thus, to ensure 1,000 images are unique we must make 499,500 comparisons. Starting with O(N^2) complexity, the processing load is further increased when we compare each image pair pixel by pixel, each having 3 RGB color channels. Since these pixelated pairwise comparisons are (to my knowledge) elemental to confirming image uniqueness, the best way to achieve computational efficiency is to focus on reducing the number of images to compare. While graph theory holds in a "brute force" approach, images have more attributes than nodes - which we can exploit for our reductionist aims.
 
