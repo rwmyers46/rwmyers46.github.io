@@ -17,7 +17,7 @@ Python's CV2 and OS modules can readily handle null image files; the real challe
 
 The equation for calculating the number of edges K for a complete, undirected graph with n nodes: K = n(n - 1)/2.
 
-$$ \cos (2\theta) $$
+$$\cos (2\theta)$$
 
 Thus, to ensure 1,000 images are unique we must make 499,500 comparisons. Starting with O(N^2) complexity, the processing load is further increased when we compare each image pair pixel by pixel, each having 3 RGB color channels. Since these pixelated pairwise comparisons are (to my knowledge) elemental to confirming image uniqueness, the best way to achieve computational efficiency is to focus on reducing the number of images to compare. While graph theory holds in a "brute force" approach, images have more attributes than nodes - which we can exploit for our reductionist aims.
 
