@@ -8,11 +8,11 @@ head: <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 
 ---
 
-<img src="/images/optimizer/eagle2.jpg" alt="drawing" height="200"/>
-
 * Neural networks trained with duplicate images exhibit decreased accuracy
 * Eliminating image duplicates with brute force has exponential processing complexity
 * Image_Optimizer algorithm exhibits top-level processor efficiency gain of 167x
+
+<img src="/images/optimizer/eagle2.jpg" alt="drawing" height="200"/>
 
 1,000s of images are required to train a robust neural network. However, redundant images do not improve the model and contribute to overfitting. Further, a single null image file may cause the build to abort with errors after several epochs of fitting. Thus, ensuring images are unique, uncorrupted, and adhere to expected file formats is imperative.
 
