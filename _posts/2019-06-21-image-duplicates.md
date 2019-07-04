@@ -10,9 +10,9 @@ head: <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 
 <img src="/images/optimizer/eagle2.jpg" alt="drawing" height="200"/>
 
-* This algorithm only required processing 2,139 image pairs compared to 357,435 pairs with a brute force approach on a test sample of 846 images.
-
-* As less than 1% of the original combinations require further evaluation, the top-level processing efficiency gain is 167x.
+* Neural networks trained with duplicate images exhibit decreased accuracy
+* Eliminating image duplicates with brute force has exponential processing complexity
+* Image_Optimizer algorithm exhibits top-level processor efficiency gain of 167x
 
 1,000s of images are required to train a robust neural network. However, redundant images do not improve the model and contribute to overfitting. Further, a single null image file may cause the build to abort with errors after several epochs of fitting. Thus, ensuring images are unique, uncorrupted, and adhere to expected file formats is imperative.
 
@@ -182,3 +182,7 @@ def Check_Duplicates(path):
                 ctr += 1
             print('Deleted {} files.'.format(ctr))
 ```
+
+Results:
+
+* On a test sample of 846 images, image processing requirements were reduced from 357,435 pairs for the brute force approach to 2,139 image pairs.
