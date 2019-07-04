@@ -11,18 +11,18 @@ head: <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 <img src="/images/optimizer/eagle2.jpg" alt="drawing" height="200"/>
 
 * Neural networks trained with duplicate images exhibit decreased accuracy
-* Eliminating image duplicates with brute force has exponential processing complexity
-* Image_Optimizer algorithm exhibits top-level processor efficiency gain of 167x
+* A brute force approach to eliminating image duplicates has exponential time complexity
+* This algorithm exhibits top-level processor efficiency gain of 167x
 
-1,000s of images are required to train a robust neural network. However, redundant images do not improve the model and contribute to overfitting. Further, a single null image file may cause the build to abort with errors after several epochs of fitting. Thus, ensuring images are unique, uncorrupted, and adhere to expected file formats is imperative.
+Thousands of images are required to train a robust neural network. If redundant images are present in your training set, model accuracy will suffer. Even with a repository of unique images, a single null file may cause the build to abort with errors - after waiting through several fitting epochs. Thus, ensuring images are unique, uncorrupted, and adhere to expected file formats is imperative.
 
-Python's CV2 and OS modules can readily handle null image files; the real challenge lies in avoid duplicate images. To confirm uniqueness not only for newly downloaded images, but also to avoid adding duplicates to our existing image directory, a pairwise comparison of each image is required. The number of comparisons required can be computed using graph theory, treating images as nodes and combinations as edges.
+Python's CV2 and OS modules can readily handle null image files; the real challenge lies in avoiding duplicate images. Even if all images within a freshly downloaded set are unique, we must ensure they do not duplicate existing images in your training directory. This can only be confirmed with a pairwise comparison of each image.
 
-The equation for calculating the number of edges K for a complete, undirected graph with n nodes:
+The number of comparisons required can be computed using graph theory and treating images as nodes and combinations as edges. The equation for calculating the number of edges K for a complete, undirected graph with n nodes:
 
 $$K_n = \frac{n*(n - 1)}{2}$$
 
-Thus, to ensure 1,000 images are unique we must make 499,500 comparisons. Starting with O(N^2) complexity, the processing load is further increased when we compare each image pair pixel by pixel, each having 3 RGB color channels. Since these pixelated pairwise comparisons are (to my knowledge) elemental to confirming image uniqueness, the best way to achieve computational efficiency is to focus on reducing the number of images to compare. While graph theory holds in a "brute force" approach, images have more attributes than nodes - which we can exploit for our reductionist aims.
+So to ensure 1,000 images are unique, we must make nearly half a million comparisons. Starting with $$O(N^2)$$ complexity, the processing load is further increased when we compare each image pair pixel by pixel, each having 3 RGB color channels. Since these pixelated pairwise comparisons are (to my knowledge) elemental to confirming image uniqueness, the best way to achieve computational efficiency is to focus on reducing the number of images to compare. While graph theory holds in a "brute force" approach, images have more attributes than nodes - which we can exploit for our reductionist aims.
 
 The `Image_Optimizer` function's core advantage is avoiding computationally intense image comparisons by focusing on the more superficial attribute of size. Taking a list of (file_name, file_size) tuples as the argument, it first finds the number of unique sizes. These sizes are used as keys for two purposes: to create a `counts` dictionary to count the number of unique size occurrences and for a `filtered_dict` dictionary to which we will append filenames.
 
