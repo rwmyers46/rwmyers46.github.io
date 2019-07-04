@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Russell W. Myers"
+title                    : "Data Science Portfolio | Russell W. Myers"
 title_separator          : "-"
 name                     : "Russell Myers"
 description              : "Data Science Portfolio"
