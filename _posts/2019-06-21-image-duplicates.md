@@ -26,15 +26,8 @@ This equation dictates that in order to ensure 1,000 images are unique, we must 
 
 Assuming these pixelated pairwise comparisons are elemental to confirming image uniqueness, I concluded the only way to increase computational efficiency was to reduce the number of image pairs.
 
-The `Image_Optimizer`'s basic process is first find each image's dimensional size, then group images sharing a common size, and only perform computationally intense image comparisons with each group.
+The `Image_Optimizer`'s operates by first finding each image's dimensional size, then grouping images sharing a common size, and finally compute image comparisons only with each group.
 
-```python
-import itertools as it
-import os
-import cv2
-import shutil
-from collections import defaultdict
-```
 Taking a list of (file_name, file_size) tuples as the argument, it first finds the number of unique sizes. These sizes are used as keys for two purposes: to create a `counts` dictionary to count the number of unique size occurrences and for a `filtered_dict` dictionary to which we will append filenames.
 
 ```python
