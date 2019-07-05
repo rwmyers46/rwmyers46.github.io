@@ -14,19 +14,19 @@ head: <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 * A brute force approach to eliminating image duplicates has exponential time complexity
 * This algorithm exhibits top-level processor efficiency gain of 167x
 
-Thousands of images are required to train a robust neural network. If redundant images are present in your training set, model accuracy will suffer. Even with a repository of unique images, a single null file may cause the build to abort with errors - after waiting through several fitting epochs. Thus, ensuring images are unique, uncorrupted, and adhere to expected file formats is imperative.
+Thousands of images are required to train robust neural networks. If redundant images are present in your training set, model accuracy will suffer. Even with a repository of unique images, a single null file may cause the build to abort with errors - after waiting through several fitting epochs. Thus, ensuring images are unique, uncorrupted, and adhere to expected file formats is imperative.
 
 Python's CV2 and OS modules can readily handle null image files; the real challenge lies in avoiding duplicate images. Even if all images within a freshly downloaded set are unique, we must ensure they do not duplicate existing images in your training directory. This can only be confirmed with a pairwise comparison of each image.
 
-The number of comparisons required can be computed using graph theory and treating images as nodes and combinations as edges. The equation for calculating the number of edges K for a complete, undirected graph with n nodes:
+The number of comparisons required can be computed using graph theory for a complete, undirected graph and treating images as (n) nodes with combinations of (K) edges:
 
 $$K_n = \frac{n*(n - 1)}{2}$$
 
-So to ensure 1,000 images are unique, we must make nearly half a million comparisons. Starting with $$O(N^2)$$ complexity, the processing load is further increased when we compare each image pair pixel by pixel, each having 3 RGB color channels. Since these pixelated pairwise comparisons are (to my knowledge) elemental to confirming image uniqueness, the best way to achieve computational efficiency is to focus on reducing the number of images to compare. While graph theory holds in a "brute force" approach, images have more attributes than nodes - which we can exploit for our reductionist aims.
+This equation dictates that in order to ensure 1,000 images are unique, we must process nearly half a million image pairs. Starting with $$O(N^2)$$ complexity, the processing load increases as image must be compared by pixel by pixel, across each pixel's 3 RGB color channels.
 
-The `Image_Optimizer` function's core advantage is avoiding computationally intense image comparisons by focusing on the more superficial attribute of size. Taking a list of (file_name, file_size) tuples as the argument, it first finds the number of unique sizes. These sizes are used as keys for two purposes: to create a `counts` dictionary to count the number of unique size occurrences and for a `filtered_dict` dictionary to which we will append filenames.
+Assuming these pixelated pairwise comparisons are elemental to confirming image uniqueness, I concluded the only way to increase computational efficiency was to reduce the number of image pairs.
 
-The `filtered_dict` of {image_dimensions : file_names list} represents a grouped list of images with identical dimensions. This dictionary is returned so that the `Check_Duplicates` function only need compare images of the same size to each other.
+The `Image_Optimizer`'s basic process is first find each image's dimensional size, then group images sharing a common size, and only perform computationally intense image comparisons with each group.
 
 ```python
 import itertools as it
@@ -35,6 +35,7 @@ import cv2
 import shutil
 from collections import defaultdict
 ```
+Taking a list of (file_name, file_size) tuples as the argument, it first finds the number of unique sizes. These sizes are used as keys for two purposes: to create a `counts` dictionary to count the number of unique size occurrences and for a `filtered_dict` dictionary to which we will append filenames.
 
 ```python
 # Group images by size to increase computational efficiency:
@@ -82,6 +83,8 @@ def Image_Optimizer(name_size):
     else:
         print("Error detected.")
 ```
+The `filtered_dict` of {image_dimensions : file_names list} represents a grouped list of images with identical dimensions. This dictionary is returned so that the `Check_Duplicates` function only need compare images of the same size to each other.
+
 ```python
 # check for redundant images in <path> directory:
 
