@@ -4,6 +4,8 @@ permalink: /projects/
 title: "Projects"
 author_profile: true
 ---
+
+![image-left](/images/cow_test.jpg){: .align-left}
 <div>
 
 <h3>Species Identification with Convolutional Neural Networks</h3>
