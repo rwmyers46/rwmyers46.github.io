@@ -8,3 +8,4 @@ author_profile: true
 <p> Species Identification with Convolutional Neural Networks </p>
 <a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
 </div>
+<hr>
