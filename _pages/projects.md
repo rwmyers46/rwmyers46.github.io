@@ -8,8 +8,30 @@ author_profile: true
 
 ![image-left](/images/cow_test.jpg){: .align-left}
 
-things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss  things to discuss
+Applied convolutional neural networks with Keras / TensorFlow to compute regional species classification using 8,000 images from Texas wildlife cameras. Data stored in S3, processed on EC2 GPU, and presented with Tableau dashboard.
 
 <a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
 
 <hr>
+
+<h3>Net Promoter Scores, Version 2.0</h3>
+
+Improved Net Promoter Scores fidelity for online reviews using NLP (Spacy, Gensim, CountVectorizer, TF-IDF), topic modeling (LDA/NMF/CorEx), sentiment analysis (VADER), and measured accuracy with Naive Bayes and Logistic Regression with data stored in MongoDB.
+
+<a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
+
+<hr>
+
+<h3>You Are What You Eat! Predicting Diets from Instacart Orders</h3>
+
+Engineered features from Kaggle Instacart dataset to classify users practicing a paleolithic diet.  Built classification model that leveraged Logistic Regression and weighted the F1 results. Data stored in PostgreSQL (AWS).
+
+<a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
+
+<hr>
+
+<h3>Algorithmic Rural Land Valuation</h3>
+
+Scraped online property listings using BeautifulSoup, Selenium and NLP to create a Multivariate Regression model to price farm & ranch land.
+
+<a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
