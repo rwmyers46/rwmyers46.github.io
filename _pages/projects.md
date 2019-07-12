@@ -12,6 +12,4 @@ things to discuss  things to discuss  things to discuss  things to discuss  thin
 
 <a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
 
-doner.
-
 <hr>
