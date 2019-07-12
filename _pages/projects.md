@@ -37,7 +37,7 @@ Engineered features from Kaggle Instacart dataset to classify users practicing a
 
 <h3>Algorithmic Rural Land Valuation</h3>
 
-![image-left](/images/cow_test.jpg){: .align-left}
+![image-left](/images/cow-2.jpg){: .align-left}
 
 Scraped online property listings using BeautifulSoup, Selenium and NLP to create a Multivariate Regression model to price farm & ranch land.
 
