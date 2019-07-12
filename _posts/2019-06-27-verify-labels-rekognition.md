@@ -5,6 +5,7 @@ tags: [AWS Rekognition, machine learning, boto3]
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 <img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
+<figcaption>Photo by @jontyson on Unsplash</figcaption>
 
 When training a neural network with images downloaded from the web, it is not uncommon for 10-25% of those photos to contain mislabeled categories. Here is one example of what Microsoft's Cognitive Services API returned for the query "wild boar":
 
