@@ -4,7 +4,7 @@ permalink: /projects/
 title: "Projects"
 author_profile: true
 ---
-<h3>Hog, Not Hog: Species Identification with Convolutional Neural Networks</h3>
+<h3>Species Identification with Convolutional Neural Networks</h3>
 
 ![image-left](/images/deer.jpg){: .align-left}
 
