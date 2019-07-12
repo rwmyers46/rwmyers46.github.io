@@ -8,7 +8,7 @@ author_profile: true
 
 ![image-left](/images/deer.jpg){: .align-left}
 
-Applied convolutional neural networks with Keras / TensorFlow to compute regional species classification using 8,000 images from Texas wildlife cameras. Data stored in S3, processed on EC2 GPU, and presented with Tableau dashboard.
+<p>Applied convolutional neural networks with Keras / TensorFlow to compute regional species classification using 8,000 images from Texas wildlife cameras. Data stored in S3, processed on EC2 GPU, and presented with Tableau dashboard.</p>
 
 <a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
 
@@ -20,7 +20,7 @@ Applied convolutional neural networks with Keras / TensorFlow to compute regiona
 
 Improved Net Promoter Scores fidelity for online reviews using NLP (Spacy, Gensim, CountVectorizer, TF-IDF), topic modeling (LDA/NMF/CorEx), sentiment analysis (VADER), and measured accuracy with Naive Bayes and Logistic Regression with data stored in MongoDB.
 
-<a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
+<a href="https://github.com/rwmyers46/Net-Promoter-Score-2.0" class="btn btn--info">View on Github</a>
 
 <hr>
 
