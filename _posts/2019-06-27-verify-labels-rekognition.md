@@ -1,5 +1,5 @@
 ---
-title: "Label Verification with Rekognition"
+title: "Label Verification with AWS Rekognition"
 date: 2019-06-27
 tags: [AWS Rekognition, machine learning, boto3]
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
