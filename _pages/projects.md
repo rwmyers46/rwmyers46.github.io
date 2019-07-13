@@ -31,7 +31,7 @@ Improved Net Promoter Scores fidelity for online reviews using NLP (Spacy, Gensi
 
 Engineered features from Kaggle Instacart dataset to classify users practicing a paleolithic diet.  Built classification model that leveraged Logistic Regression and weighted the F1 results. Data stored in PostgreSQL (AWS).
 
-<a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
+<a href="https://github.com/rwmyers46/Instacart-Diet-Classification" class="btn btn--info">View on Github</a>
 
 <hr>
 
@@ -41,4 +41,4 @@ Engineered features from Kaggle Instacart dataset to classify users practicing a
 
 Scraped online property listings using BeautifulSoup, Selenium and NLP to create a Multivariate Regression model to price farm & ranch land.
 
-<a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
+<a href="https://github.com/rwmyers46/Rural-Land-Valuation" class="btn btn--info">View on Github</a>

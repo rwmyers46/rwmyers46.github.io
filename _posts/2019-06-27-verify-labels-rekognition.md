@@ -7,13 +7,13 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 <img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
 <figcaption>Photo by @jontyson on Unsplash</figcaption>
 
-When training a neural network with images downloaded from the web, it is not uncommon for 10-25% of those photos to contain mislabeled categories. For example, when gathering images from Microsoft's Cognitive Services API to train a model with the query "wild boar," among the hundreds of downloaded images was a promotional poster from the film Wild Hogs:
+When training a neural network with images downloaded from the web, it is common for 10-25% of those photos to contain mislabeled categories. For example, when gathering images from Microsoft's Cognitive Services API to train a model with the query "wild boar," among the hundreds of downloaded images was a promotional poster from the film Wild Hogs:
 
 <img src="/images/rekognition/wild-boar-movie.jpg"/>
 
-Ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy. Aside from AWS Mechanical Turk, the only other option was manually reviewing 1,000s of images in your training data. AWS Rekognition provides a fast and inexpensive alternative to verify image labels.
+Ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy. In the past, AWS Mechanical Turk was the default platform to employ for reviewing 1,000s of training data images. AWS Rekognition API is a microservice designed to handle all the image and video analysis most applications require. However, some models must be custom built for more specific requirements. AWS Rekognition can support these builds, providing a fast, accurate, and inexpensive alternative to verify image labels.
 
-Before proceeding, install Boto 3 and separate your images by label in an S3 bucket directory.
+Before proceeding, install Boto 3 and separate images by label in an S3 bucket directory.
 
 ##### Step 1 - Instantiate S3 and Rekognition Boto3 Clients:
 
@@ -39,7 +39,7 @@ Next we build a list containing those labels that Rekognition is associating wit
 ```
 ##### Step 3 - Run Label Verification with Rekognition:
 
-Unless you would like to modify the Confidence or MaxLabels parameters, the code below with handle the rest. The script requires user confirmation before deleting the files, but I have yet to find a file mistakenly on deck for deletion.
+Unless you would like to modify the Confidence or MaxLabels parameters, the code below with handle the rest. The script requires user confirmation before deleting the files (note: I have yet to find a file mistakenly on deck for deletion).
 
 In the example below, I also wanted to remove photos containing people. With Rekognition, this task was as simple as adding a the `('Person' in test_labels)` clause to the conditional statement.
 
