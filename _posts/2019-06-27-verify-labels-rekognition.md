@@ -13,6 +13,9 @@ When training neural networks with images downloaded from the web, it is common 
 
 Ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy, but manually reviewing 1,000s of training data images is a tedious process. These slow, repetitive types of tasks are great candidates for AWS Mechanical Turk, but for image labeling, Rekognition is a fast, accurate, and inexpensive alternative.
 
+<img src="/images/rekognition.jpg"/>
+<figcaption>AWS Recognition</figcaption>
+
 The AWS Rekognition API is a microservice designed to handle all the image and video analysis most applications require. From the documentation, Rekognition's image capabilities include: "...identify the objects, people, text, scenes, and activities, as well as detect any inappropriate content. Amazon Rekognition also provides highly accurate facial analysis and facial recognition." This begs the question: why build your own models at all? While Rekognition is a 90% solution for most image and video analysis, specific use cases require custom models.
 
 <img src="/images/article-deer.jpg"/>
