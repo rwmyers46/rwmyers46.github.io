@@ -13,13 +13,12 @@ When training neural networks with images downloaded from the web, it is common 
 
 Ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy, but manually reviewing 1,000s of training data images is a tedious process. These slow, repetitive types of tasks are great candidates for AWS Mechanical Turk, but for image labeling, Rekognition is a fast, accurate, and inexpensive alternative.
 
-<img src="/images/rekognition.jpg"/>
-<figcaption>AWS Recognition</figcaption>
+<img src="/images/rekognition.jpeg"/>
+<figcaption>AWS Rekognition</figcaption>
 
 The AWS Rekognition API is a microservice designed to handle all the image and video analysis most applications require. From the documentation, Rekognition's image capabilities include: "...identify the objects, people, text, scenes, and activities, as well as detect any inappropriate content. Amazon Rekognition also provides highly accurate facial analysis and facial recognition." This begs the question: why build your own models at all? While Rekognition is a 90% solution for most image and video analysis, specific use cases require custom models.
 
 <img src="/images/article-deer.jpg"/>
-<figcaption>Whitetail Deer</figcaption>
 
 Wildlife identification is one example currently outside of Rekognition's scope. Testing Rekognition with images of Whitetail Deer returned "impala", an aesthetically similar animal, but from a different taxonomy family and indigenous to another continent. In addition to the elk, mule deer, and caribou sharing the family Cervidae in North America, there are also dozens of Whitetail Deer sub-species spread throughout the Americas. So while Rekognition is broadly accurate, wildlife classification is a specific application which requires a model with deeper discernment.  
 
@@ -111,7 +110,7 @@ for page in result:
                     if label['Confidence'] > 85:
                         labels_list.append(label['Name'])
 ```
-In the segment below, I also wanted to remove photos containing people. With Rekognition, this task was as simple as adding a the `('Person' in test_labels)` clause to the conditional statement.
+In the last segment below, I also wanted to remove photos containing people. With Rekognition, this task was as simple as adding a the `('Person' in test_labels)` clause to the conditional statement.
 
 ```python
 # compare labels_list to test_labels and remove images lacking evidence of our desired subject:
