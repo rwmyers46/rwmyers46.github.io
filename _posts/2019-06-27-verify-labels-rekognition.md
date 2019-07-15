@@ -7,11 +7,15 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 <img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
 <figcaption>Photo by @jontyson on Unsplash</figcaption>
 
-When training a neural network with images downloaded from the web, it is common for 10-25% of those photos to contain mislabeled categories. For example, when gathering images from Microsoft's Cognitive Services API to train a model with the query "wild boar," among the hundreds of downloaded images was a promotional poster from the film Wild Hogs:
+When training neural networks with images downloaded from the web, it is common for 10-25% of those photos to contain mislabeled categories. For example, when gathering images from Microsoft's Cognitive Services API to train a model with the query "wild boar," among the hundreds of downloaded images was a promotional poster from the film Wild Hogs:
 
 <img src="/images/rekognition/wild-boar-movie.jpg"/>
 
-Ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy. In the past, AWS Mechanical Turk was the default platform to employ for reviewing 1,000s of training data images. AWS Rekognition API is a microservice designed to handle all the image and video analysis most applications require. However, some models must be custom built for more specific requirements. AWS Rekognition can support these builds, providing a fast, accurate, and inexpensive alternative to verify image labels.
+Ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy, but manually reviewing 1,000s of training data images is a tedious process. These slow, repetitive types of tasks are great candidates for AWS Mechanical Turk, but for image labeling, Rekognition is a fast, accurate, and inexpensive alternative.
+
+The AWS Rekognition API is a microservice designed to handle all the image and video analysis most applications require. From the documentation, Rekognition's image capabilities include: "...identify the objects, people, text, scenes, and activities, as well as detect any inappropriate content. Amazon Rekognition also provides highly accurate facial analysis and facial recognition." This begs the question of why build your own models at all? While Rekognition is a 90% solution for most general image and video analysis, specific use cases require custom models.
+
+Wildlife identification is one example currently outside of Rekognition's scope. Testing Rekognition with images of Whitetail Deer returned "impala", an aesthetically similar animal, but from a different taxonomy family - and indigenous continent. In addition to the elk, mule deer, and caribou sharing the Cervidae family in North America, Whitetail Deer also have dozens of sub-species spread throughout the Americas. So while Rekognition is broadly accurate, wildlife classification is a specific application which requires a model with deeper discernment.  
 
 Before proceeding, install Boto 3 and separate images by label in an S3 bucket directory.
 
