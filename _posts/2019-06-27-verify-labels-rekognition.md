@@ -9,7 +9,9 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 <figcaption>Photo by @jontyson on Unsplash </figcaption>
 </figure>
 
-When training neural networks with images downloaded from the web, it is common for 10-25% of those photos to contain mislabeled categories. For example, when gathering images from Microsoft's Cognitive Services API to train a model with the query "wild boar," among the hundreds of downloaded images was a promotional poster from the film Wild Hogs:
+At its core, the predictive quality of any machine learning algorithm is a function of data quantity and quality. Training neural networks for image recognition is no exception, requiring at least 800 high-quality images per class. Compared to numerical or categorical data, which can be easily verified for unexpected types or null values, working with imagery raises more questions: Are the training images representative of your target label? Does your training imagery contain additional objects or other unproductive noise? Are the images redundant? ([see related post](https://rwmyers46.github.io/image-duplicates/) How can you be sure without manually reviewing each image?
+
+, such as additional objects   with images downloaded from the web, it's likely that 10-25% of those files will contain mislabeled categories. For example, when gathering images from Microsoft's Cognitive Services API to train a model with the query "wild boar," among the hundreds of downloaded images was a promotional poster from the film Wild Hogs:
 
 <img src="/images/rekognition/wild-boar-movie.jpg"/>
 
