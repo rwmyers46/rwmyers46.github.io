@@ -1,11 +1,26 @@
 ---
-title: "Verifying Labels with AWS Rekognition"
+title: "Label Verification with AWS Rekognition"
 date: 2019-06-27
 tags: [AWS Rekognition, machine learning, boto3]
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
+<figure>
 <img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
-<figcaption>Photo by @jontyson on Unsplash</figcaption>
+<figcaption>Photo by @jontyson on Unsplash </figcaption>
+</figure>
+
+figure {
+    display: inline-block;
+    border: 1px dotted gray;
+    margin: 20px; 
+}
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    border: 1px dotted blue;
+    text-align: center;
+}
 
 When training neural networks with images downloaded from the web, it is common for 10-25% of those photos to contain mislabeled categories. For example, when gathering images from Microsoft's Cognitive Services API to train a model with the query "wild boar," among the hundreds of downloaded images was a promotional poster from the film Wild Hogs:
 
