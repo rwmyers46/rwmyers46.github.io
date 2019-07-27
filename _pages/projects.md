@@ -8,7 +8,7 @@ author_profile: true
 
 ![image-left](/images/deer.jpg){: .align-left}
 
-<p>Applied convolutional neural networks with Keras / TensorFlow to compute regional species classification using 8,000 images from Texas wildlife cameras. Data stored in S3, processed on EC2 GPU, and presented with Tableau dashboard.</p>
+<p>Applied convolutional neural networks with Keras / TensorFlow to compute regional species classification using 8,000 images from Texas wildlife cameras. Data stored in S3, processed on EC2 GPU, and visualized with Tableau.</p>
 
 <a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
 
@@ -35,7 +35,7 @@ Engineered features from Kaggle Instacart dataset to classify users practicing a
 
 <hr>
 
-<h3>Algorithmic Rural Land Valuation</h3>
+<h3>Rural Land Valuation</h3>
 
 ![image-left](/images/cow-2.jpg){: .align-left}
 
