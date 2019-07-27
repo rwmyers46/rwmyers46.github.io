@@ -20,7 +20,7 @@ The predictive quality of any machine learning algorithm is a function of data q
 
 Finally, how can you be sure of the answers to these questions without manually reviewing each image?
 
-In my experience, 15-25% of images from the web will contain mislabeled categories. Even with platforms specifically designed to be training imagery hubs, there is no escape from the need to verify image target labels. Microsoft's Cognitive Services API, returned hundreds of images tangentially related to the query "wild boar," including a promotional poster from a film mostly void of any detectable physical features resembling the chosen animal.
+In my experience, 15-25% of images from the web are mislabeled. Even with platforms designed as training imagery hubs, there is no escape from the need to verify image target labels. Microsoft's Cognitive Services API, returned hundreds of images tangentially related to the query "wild boar," including a promotional poster from a film mostly void of any detectable physical features resembling the chosen animal.
 
 <img src="/images/rekognition/wild-boar-movie.jpg"/>
 
