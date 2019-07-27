@@ -8,7 +8,13 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 <img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
 <figcaption>Photo by @jontyson on Unsplash</figcaption>
 
-At its core, the predictive quality of any machine learning algorithm is a function of data quantity and quality. Training neural networks for image recognition is no exception, requiring at least 800 high-quality images per class. Compared to numerical or categorical data, which can be easily screened for unexpected types and / or null values, working with imagery raises more questions: Are the training images representative of your target label? Does your training imagery contain additional objects or other unproductive noise? Are there redundant in your directory ([see related post](https://rwmyers46.github.io/image-duplicates/) Finally, how can you be sure of the answers to these questions without manually reviewing each image?
+The predictive quality of any machine learning algorithm is a function of data quantity and quality. Training neural networks for image recognition is no exception, requiring at least 800 high-quality images per class. Compared to numerical or categorical data, which can be easily screened for unexpected types and null values, working with imagery raises more questions:
+
+1. Are the training images representative of your target label?
+2. Does your training imagery contain additional objects or other unproductive noise?
+3. Are there redundant in your directory ([see related post])(https://rwmyers46.github.io/image-duplicates/)
+
+Finally, how can you be sure of the answers to these questions without manually reviewing each image?
 
 In my experience, 15-25% of images from the web will contain mislabeled categories. Even with platforms specifically designed to be training imagery hubs, there is no escape from the need to verify image target labels. Microsoft's Cognitive Services API, returned hundreds of images tangentially related to the query "wild boar," including a promotional poster from a film mostly void of any detectable physical features resembling the chosen animal.
 
