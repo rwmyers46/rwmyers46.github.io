@@ -6,11 +6,11 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 
 <img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
-<figcaption>Photo by @jontyson on Unsplash </figcaption>
+<figcaption>Photo by @jontyson on Unsplash</figcaption>
 
 At its core, the predictive quality of any machine learning algorithm is a function of data quantity and quality. Training neural networks for image recognition is no exception, requiring at least 800 high-quality images per class. Compared to numerical or categorical data, which can be easily screened for unexpected types and / or null values, working with imagery raises more questions: Are the training images representative of your target label? Does your training imagery contain additional objects or other unproductive noise? Are there redundant in your directory ([see related post](https://rwmyers46.github.io/image-duplicates/) Finally, how can you be sure of the answers to these questions without manually reviewing each image?
 
-In my experience, 15-25% of images from the web will contain mislabeled categories. Even with platforms specifically designed to be training imagery hubs, there is no escape from the need to verify image target labels. Microsoft's Cognitive Services API, returned hundreds of images tangentially related to the query "wild boar," including a promotional poster from a film mostly void of any detectable physical features resembling the search terms.
+In my experience, 15-25% of images from the web will contain mislabeled categories. Even with platforms specifically designed to be training imagery hubs, there is no escape from the need to verify image target labels. Microsoft's Cognitive Services API, returned hundreds of images tangentially related to the query "wild boar," including a promotional poster from a film mostly void of any detectable physical features resembling the chosen animal.
 
 <img src="/images/rekognition/wild-boar-movie.jpg"/>
 
@@ -23,7 +23,7 @@ The AWS Rekognition API is a microservice designed to handle all the image and v
 
 <img src="/images/article-deer.jpg"/>
 
-Wildlife identification is one example currently outside of Rekognition's scope. Testing Rekognition with images of Whitetail Deer returns "impala", a somewhat aesthetically similar animal, but from a different taxonomy family and indigenous to another continent. In addition to the elk, mule deer, and caribou sharing the family Cervidae in North America, there are also dozens of Whitetail Deer sub-species spread throughout the Americas. So while Rekognition is broadly accurate, wildlife classification is a specific application which requires a model with deeper discernment.  
+Wildlife species identification is one example case currently outside of Rekognition's scope. Testing Rekognition with images of a Whitetail Deer returns "impala", an aesthetically similar animal, but from a different taxonomy family and indigenous to another continent. Considering that dozens of Whitetail Deer sub-species are also spread throughout the Americas, we can conclude that technology won't disrupt hunting guides for some time. So while Rekognition is broadly accurate, more specific applications may require a model with deeper discernment.  
 
 ##### Step 1 - Instantiate S3 and Rekognition Boto3 Clients:
 
