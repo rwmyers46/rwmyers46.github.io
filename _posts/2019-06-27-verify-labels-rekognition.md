@@ -12,7 +12,7 @@ The predictive quality of any machine learning algorithm is a function of data q
 
 1. Are the training images representative of your target label?
 2. Does your training imagery contain additional objects or other unproductive noise?
-3. Are there redundant in your directory ([see related post])(https://rwmyers46.github.io/image-duplicates/)
+3. Are there redundant in your directory ([see related post](https://rwmyers46.github.io/image-duplicates/))
 
 Finally, how can you be sure of the answers to these questions without manually reviewing each image?
 
