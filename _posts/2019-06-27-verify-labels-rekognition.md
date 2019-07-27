@@ -8,9 +8,9 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 <img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
 <figcaption>Photo by @jontyson on Unsplash</figcaption>
 
-* AWS Rekognition is an exceptional image preprocessing utility for data scientists
-* Image label verification with Rekognition is a superior alternative to Mechanical Turk
-* Boto3 enables fast development & deployment of machine learning on AWS services
+* Quality training imagery is critical for building robust neural networks
+* AWS Rekognition can be leveraged as an image processing utility for a variety of data science applications
+* Verifying image labels with Rekognition is a simple, cost-effective alternative to Mechanical Turk
 
 The predictive quality of any machine learning algorithm is a function of data quantity and quality. Training neural networks for image recognition is no exception, requiring at least 800 high-quality photos per class. Compared to numerical or categorical data, which can be easily screened for unexpected types and null values, working with imagery raises more questions:
 
@@ -56,7 +56,7 @@ In the code block below, we first instantiate `s3_client` with boto3 and set `bu
 ```
 ##### Step 2 - Select Test Images:
 
-Next we build a list containing those labels that Rekognition is associating with your desired label. To do this, find 3 to 5 images in your bucket that exemplify the subject label, ideally as single instances excluding other objects. In this example, I used 3 test images for a whitetail deer. Copy these image paths to the `test_images` list.
+Next we build a list containing those labels that Rekognition is associating with your desired label. To do this, select a few images in your bucket that exemplify the target label - ideally as single instances excluding other extraneous objects. Copy these image paths to the `test_images` list. In this example, I used 3 test images for a whitetail deer: 
 
 ```python
   test_images = ['image-1-path, image-2-path, image-3-path']
