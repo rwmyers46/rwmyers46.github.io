@@ -5,7 +5,7 @@ tags: [AWS Rekognition, Image Preprocessing, Boto3]
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 
-<img style="margin: 0px 15px 15px 0px;" src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
+<img style="margin: 0px 0px 0px 0px;" src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
 <figcaption>Photo by @jontyson on Unsplash</figcaption>
 
 
