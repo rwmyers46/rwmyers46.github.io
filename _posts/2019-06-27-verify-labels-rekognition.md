@@ -5,14 +5,14 @@ tags: [AWS Rekognition, Image Preprocessing, Boto3]
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 
-<img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
+<img style="margin: 0px 15px 15px 0px;" src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
 <figcaption>Photo by @jontyson on Unsplash</figcaption>
 
-* Quality training imagery is critical for building robust neural networks
+
 * AWS Rekognition can be leveraged as an image processing utility for a variety of data science applications
 * Verifying image labels with Rekognition is a simple, cost-effective alternative to Mechanical Turk
 
-The predictive quality of any machine learning algorithm is a function of data quantity and quality. Training neural networks for image recognition is no exception, requiring at least 800 high-quality photos per class. Compared to numerical or categorical data, which can be easily screened for unexpected types and null values, working with imagery raises more questions:
+The predictive power of any machine learning algorithm is a function of data quantity and quality. Training neural networks for image recognition is no exception, requiring at least 800 high-quality photos per class. Compared to numerical or categorical data, which can be easily screened for unexpected types and null values, working with imagery raises more questions:
 
 1. Are the training images representative of your target label?
 2. Does your training imagery contain extraneous objects or other noise likely to confuse your model?
