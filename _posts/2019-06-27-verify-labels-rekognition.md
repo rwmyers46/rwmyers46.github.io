@@ -5,13 +5,21 @@ tags: [AWS Rekognition, Image Preprocessing, Boto3]
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 
-<figure>
 <img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
 <figcaption>Photo by @jontyson on Unsplash</figcaption>
-</figure>
 
 * AWS Rekognition can be leveraged as an image processing utility for a variety of data science applications
 * Verifying image labels with Rekognition is a simple, time-saving hack when building neural networks
+
+The Rekognition API is an Amazon Web Services (AWS) microservice designed for computer vision applications. As part of AWS's AI / ML suite, Rekognition provides scalable, on-demand image and video processing for applications. Rekognition has been successfully applied to everything from flagging adult content to scanning thousands of hours of surveillance video to locate a crime suspect. So as an AWS Solutions Architect studying data science, I wanted to see if Rekognition could also help build a better convolutional neural network. *Spoiler Alert: it can!*
+
+When building a neural network for image detection, ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy. Just as it would confuse a young child learning the English alphabet to masquerade a Japanese character as the 27th letter, training a neural network with mislabeled data will reduce model accuracy.
+
+Training neural networks for image recognition requires *at least* 800 high-quality photos per class. For example, if you're trying to build some AI to determine which of 3 sports is being played you'll need ~ 3,000 unique images, more if you're including a null class. 
+
+but manually reviewing 1,000s of training data images is a tedious process.
+
+  handle all the image and video analysis most applications require. From the documentation, Rekognition's image capabilities include: "...identify the objects, people, text, scenes, and activities, as well as detect any inappropriate content. Amazon Rekognition also provides highly accurate facial analysis and facial recognition."
 
 The predictive power of any machine learning algorithm is a function of data quantity and quality. Training neural networks for image recognition is no exception, requiring at least 800 high-quality photos per class.
 
