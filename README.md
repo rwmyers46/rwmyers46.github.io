@@ -1,4 +1,4 @@
-# [Data Science Portfoilio](https://rwmyers46.github.io/)
+# [Data Science Portfolio](https://rwmyers46.github.io/)
 
 Site built using Jekyll with Minimal Mistakes theme: https://mmistakes.github.io/minimal-mistakes/ 
 
