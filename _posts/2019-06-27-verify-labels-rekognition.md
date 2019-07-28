@@ -5,9 +5,10 @@ tags: [AWS Rekognition, Image Preprocessing, Boto3]
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 
-<img style="margin: 0px 0px 0px 0px;" src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
+<figure>
+<img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
 <figcaption>Photo by @jontyson on Unsplash</figcaption>
-
+</figure>
 
 * AWS Rekognition can be leveraged as an image processing utility for a variety of data science applications
 * Verifying image labels with Rekognition is a simple, cost-effective alternative to Mechanical Turk
