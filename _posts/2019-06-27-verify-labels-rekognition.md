@@ -15,10 +15,10 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 The predictive quality of any machine learning algorithm is a function of data quantity and quality. Training neural networks for image recognition is no exception, requiring at least 800 high-quality photos per class. Compared to numerical or categorical data, which can be easily screened for unexpected types and null values, working with imagery raises more questions:
 
 1. Are the training images representative of your target label?
-2. Does your training imagery contain additional objects or other unproductive noise?
-3. Are there redundant images in your directory? ([see related post](https://rwmyers46.github.io/image-duplicates/))
+2. Does your training imagery contain extraneous objects or other noise likely to confuse your model?
+3. Are there redundant images in your directory? ([related post](https://rwmyers46.github.io/image-duplicates/))
 
-Finally, how can you be sure of the answers to these questions without manually reviewing each image?
+Finally, how can we confidently answer any of these questions without manually reviewing every image?
 
 In my experience, 15-25% of images from the web are mislabeled. Even with platforms designed as training imagery hubs, there is no escape from the need to verify image target labels. Microsoft's Cognitive Services API, returned hundreds of images tangentially related to the query "wild boar," including a promotional poster from a film mostly void of any detectable physical features resembling the chosen animal.
 
@@ -56,7 +56,7 @@ In the code block below, we first instantiate `s3_client` with boto3 and set `bu
 ```
 ##### Step 2 - Select Test Images:
 
-Next we build a list containing those labels that Rekognition is associating with your desired label. To do this, select a few images in your bucket that exemplify the target label - ideally as single instances excluding other extraneous objects. Copy these image paths to the `test_images` list. In this example, I used 3 test images for a whitetail deer: 
+Next we build a list containing those labels that Rekognition is associating with your desired label. To do this, select a few images in your bucket that exemplify the target label - ideally as single instances excluding other extraneous objects. Copy these image paths to the `test_images` list. In this example, I used 3 test images for a whitetail deer:
 
 ```python
   test_images = ['image-1-path, image-2-path, image-3-path']
