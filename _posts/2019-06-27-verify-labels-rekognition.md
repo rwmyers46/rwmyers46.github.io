@@ -19,10 +19,9 @@ Training neural networks for image recognition requires *at least* 800 high-qual
 
 Compared with numerical or categorical data, which can be screened for inconsistent types and null values with minimal code, working with imagery is a bit trickier:
 
-1. How do you know the training images are representative of your target label?
-2. Does your training imagery contain extraneous objects or other noise likely to confuse your model?
+1. How do you know all training images are representative of your target label?
+2. Does your training imagery contain multiple instances of the target label, extraneous objects or other noise likely to confuse your model?
 3. Are there redundant images in your directory? ([related post](https://rwmyers46.github.io/image-duplicates/))
-4. Do the images contain multiple instances of the target label?
 
 Traditionally, these questions could not be confidently answered without a human manually reviewing each and every image. Oftentimes, this time-intensive, repetitive work was hired out via platforms like AWS Mechanical Turk, but even delegation takes time.
 
@@ -62,7 +61,8 @@ Next we build a list containing those labels that Rekognition is associating wit
 Unless you would like to modify the Confidence or MaxLabels parameters, the code below with handle the rest. The script requires user confirmation before deleting the files (note: I have yet to find a file mistakenly on deck for deletion).
 
 ```python
-# Generate a test_labels list by loading photos consecutively and capturing Rekognition's response.
+# Generate a test_labels list by loading photos consecutively
+# and capturing Rekognition's response:
 
 animal_list = []
 test_labels = {}
@@ -87,7 +87,8 @@ for img in test_images:
 
 test_labels = set(animal_list)
 
-# create an object type botocore.paginate.PageIterator from images in s3 bucket:
+# create object type botocore.paginate.PageIterator
+# from images in s3 bucket:
 
 paginator = s3_client.get_paginator('list_objects_v2')
 result = paginator.paginate(Bucket = bucket_name, Prefix = prefix)
@@ -112,7 +113,7 @@ for page in result:
                     },
                     MaxLabels = 10,
                 )
-# append response labels above confidence > 85% to labels_list:
+# append response labels > 85% confidence to labels_list:
 
                 labels_list = []
                 for label in rek_response['Labels']:
@@ -122,19 +123,20 @@ for page in result:
 In the last segment below, I also wanted to remove photos containing people. With Rekognition, this task was as simple as adding a the `('Person' in test_labels)` clause to the conditional statement.
 
 ```python
-# compare labels_list to test_labels and remove images lacking evidence of our desired subject:
+# compare labels_list to test_labels and remove images
+# lacking evidence of our desired subject:
 
-                labels_list = set(labels_list)
-                if (not labels_list.intersection(test_labels)) or ('Person' in test_labels):
-                    s3_client.delete_object(Bucket = bucket_name, Key = keyString)
-                    bad_pics += 1
-            except:
-                print('Bad image:', keyString)
+    labels_list = set(labels_list)
+    if (not labels_list.intersection(test_labels)) or ('Person' in test_labels):
+        s3_client.delete_object(Bucket = bucket_name, Key = keyString)
+        bad_pics += 1
+except:
+    print('Bad image:', keyString)
 
 print('{} images processed'.format(len(keyString_list)))
 print('Deleted {} images.'.format(bad_pics))
 ```
-##### Pink Elephants:
+##### Conclusion:
 
 So if AWS Rekognition has perfected computer vision, why build your own models at all? While Rekognition is a 90% solution for most image and video analysis, specific use cases require custom models.
 
