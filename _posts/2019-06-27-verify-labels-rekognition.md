@@ -31,7 +31,6 @@ Traditionally, these questions could not be confidently answered without a human
 So in lieu of spending a weekend tediously reviewing thousands of training images, I decided to enlist AWS Rekognition for the task of verifying image labels. It worked flawlessly - and took less than a minute.
 
 <img src="/images/rekognition-Page-1b.jpg"/>
-<figcaption>Basic Schematic</figcaption>
 
 ##### Step 1 - Instantiate S3 and Rekognition Boto3 Clients:
 
