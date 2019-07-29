@@ -24,11 +24,14 @@ Compared with numerical or categorical data, which can be screened for inconsist
 
 1. How do you know all training images are representative of your target label?
 2. Does your training imagery contain multiple instances of the target label, extraneous objects or other noise likely to confuse your model?
-3. Are there redundant images with unique filenames in your directory? ([solution: see related post](https://rwmyers46.github.io/image-duplicates/))
+3. Are there redundant images with unique filenames in your directory? ([see related post](https://rwmyers46.github.io/image-duplicates/))
 
 Traditionally, these questions could not be confidently answered without a human manually reviewing each and every image. Oftentimes, this time-intensive, repetitive work was hired out via platforms like AWS Mechanical Turk, but even delegation takes time.
 
 So in lieu of spending a weekend tediously reviewing thousands of training images, I decided to enlist AWS Rekognition for the task of verifying image labels. It worked flawlessly - and took less than a minute.
+
+<img src="/images/rekognition-Page-1b.jpg"/>
+<figcaption>Basic Schematic</figcaption>
 
 ##### Step 1 - Instantiate S3 and Rekognition Boto3 Clients:
 
