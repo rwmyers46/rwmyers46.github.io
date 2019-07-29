@@ -22,9 +22,11 @@ The number of comparisons required can be computed using graph theory for a comp
 
 $$K_n = \frac{n*(n - 1)}{2}$$
 
-This equation dictates that in order to ensure 1,000 images are unique, we must process nearly half a million image pairs. Starting with $$O(N^2)$$ complexity, the processing load increases as image must be compared by pixel by pixel, across each pixel's 3 RGB color channels.
+This equation dictates that in order to ensure 1,000 images are unique, we must process nearly half a million image pairs. Starting with $$O(N^2)$$ complexity, the processing load increases because images must be compared by pixel by pixel, across each pixel's 3 RGB color channels.
 
-Assuming these pixelated pairwise comparisons are elemental to confirming image uniqueness, I concluded the only way to increase computational efficiency was to reduce the number of image pairs.
+*Sidenote: For the standard image encoding color depth of 24-bits, each pixel can assume one of $$2^24 = 16,777,216$$ colors. We could exploit the low probability that a randomly selected pixel from two images would possess identical colors at an identical location if they not identical to create additional processing efficiency, but this would also assume the color spectrum is evenly distributed.*
+
+So assuming that a pixelated pairwise comparison is elemental to confirming image uniqueness, I concluded the only way to increase computational efficiency was to reduce the number of image pairs.
 
 The `Image_Optimizer`'s operates by first finding each image's dimensional size, then grouping images sharing a common size, and finally compute image comparisons only with each group.
 

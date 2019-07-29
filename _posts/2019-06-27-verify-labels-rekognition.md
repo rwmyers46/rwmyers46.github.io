@@ -28,7 +28,7 @@ Compared with numerical or categorical data, which can be screened for inconsist
 
 Traditionally, these questions could not be confidently answered without a human manually reviewing each and every image. Oftentimes, this time-intensive, repetitive work was hired out via platforms like AWS Mechanical Turk, but even delegation takes time.
 
-So in lieu of spending a weekend tediously reviewing thousands of training images, I decided to enlist AWS Rekognition for the task of verifying image labels. It worked flawlessly - and took less than a minute.
+So in lieu of spending a weekend tediously reviewing thousands of training images, I decided to enlist AWS Rekognition for the task of verifying image labels - and it worked flawlessly. 
 
 <img src="/images/rekognition-Page-1b.jpg"/>
 
