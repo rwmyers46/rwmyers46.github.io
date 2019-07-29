@@ -1,7 +1,7 @@
 ---
 title: "Image Labeling with AWS Rekognition"
 date: 2019-06-27
-tags: [AWS Rekognition, Image Preprocessing, Boto3]
+tags: [AWS Rekognition, Python, Image Preprocessing]
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 
