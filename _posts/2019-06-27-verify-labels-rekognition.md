@@ -13,6 +13,9 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 
 The Rekognition API is an Amazon Web Services (AWS) microservice designed for computer vision applications. As part of AWS's Machine Learning suite, Rekognition provides scalable, on-demand image and video AI processing. Rekognition has been successfully applied to everything from flagging adult content to facial recognition for law enforcement. So as an AWS Solutions Architect studying data science, I wanted to see if Rekognition could also help build a better convolutional neural network. *Spoiler Alert - it can!*
 
+<img src="/images/rekognition-2.png"/>
+<figcaption>AWS Rekognition</figcaption>
+
 When building a neural network for image detection, ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy. Just as a Japanese character masquerading as the 27th letter would it confuse a child learning the English alphabet, training neural networks with mislabeled data will reduce a model's performance.
 
 Training neural networks for image recognition requires at least 800 high-quality photos per class. For example, if you're building some AI to distinguish between two animals, plan on gathering about 3,000 images (20% will be useless or redundant and you'll need an extra 30% for the null class).
@@ -26,9 +29,6 @@ Compared with numerical or categorical data, which can be screened for inconsist
 Traditionally, these questions could not be confidently answered without a human manually reviewing each and every image. Oftentimes, this time-intensive, repetitive work was hired out via platforms like AWS Mechanical Turk, but even delegation takes time.
 
 So in lieu of spending a weekend tediously reviewing thousands of training images, I decided to enlist AWS Rekognition for the task of verifying image labels. It worked flawlessly - and took less than a minute.
-
-<img src="/images/rekognition-2.png"/>
-<figcaption>AWS Rekognition</figcaption>  
 
 ##### Step 1 - Instantiate S3 and Rekognition Boto3 Clients:
 
@@ -136,12 +136,12 @@ except:
 print('{} images processed'.format(len(keyString_list)))
 print('Deleted {} images.'.format(bad_pics))
 ```
-##### Conclusion:
+##### Pink Elephants & Whitetail Deer:
 
-So if AWS Rekognition has perfected computer vision, why build your own models at all? While Rekognition is a 90% solution for most image and video analysis, specific use cases require custom models.
+So if AWS Rekognition has perfected computer vision, why build your own models at all? While Rekognition is a 90% solution for most image and video analysis, specific use cases require custom models. Wildlife species identification is one example case currently outside of Rekognition's scope.
 
 <img src="/images/article-deer.jpg"/>
 
-Wildlife species identification is one example case currently outside of Rekognition's scope. Testing Rekognition with images of a Whitetail Deer returns "impala", an aesthetically similar animal, but from a different taxonomy family and indigenous to another continent. Considering that dozens of Whitetail Deer sub-species are also spread throughout the Americas, we can conclude that hunting guides are safely outside disruption's path.
+Testing Rekognition with images of a Whitetail Deer returns "impala", an aesthetically similar animal, but from a different taxonomy family and indigenous to another continent. Considering that dozens of Whitetail Deer sub-species are also spread throughout the Americas, we can conclude that hunting guides are safely outside disruption's path.
 
 So while Rekognition is broadly accurate, more specific applications may require a model with deeper discernment. But for verifying image labels, Rekognition is a fast, accurate, and inexpensive alternative to traditional methods.
