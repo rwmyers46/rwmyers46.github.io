@@ -22,11 +22,11 @@ The number of comparisons required can be computed using graph theory for a comp
 
 $$K_n = \frac{n*(n - 1)}{2}$$
 
-This equation dictates that in order to ensure 1,000 images are unique, we must process nearly half a million image pairs. Starting with $$O(N^2)$$ complexity, the processing load increases because images must be compared pixel-by-pixel, across each pixel's 3 RGB color channels. To visualize this, meet my dog Jimi. In order to programmatically determine whether the images on the right and left are the same dog, each pixel must match across each color channel:
+This equation dictates that in order to ensure 1,000 images are unique, we must process nearly half a million image pairs. Starting with $$O(N^2)$$ complexity, the processing load increases because images must be compared pixel-by-pixel, across each pixel's 3 RGB color channels. To visualize this, meet my dog Jimi. In order to programmatically determine whether the images on the right and left are the same, every pixel must match across each color channel:
 
 <img src="/images/optimizer/jimi_v2.jpg"/>
 
-*Sidenote: For the standard image encoding color depth of 24-bits, each pixel can assume one of $$2^{24} = 16,777,216$$ colors. We could exploit the low probability that a randomly selected pixel from two images would possess identical colors, at an identical location, if they were not in fact identical, to create additional processing efficiency. However, the color spectrum is not evenly utilized, so this method would first require computing the color distribution of an image set which is beyond the scope of this post.*
+*Sidenote: For the standard image encoding color depth of 24-bits, each pixel can assume one of $$2^{24} = 16,777,216$$ colors. In lieu of comparing every pixel, we could exploit the vast number of colors to create additional processing efficiency: assuming the color spectrum is evenly utilized, the probability that 1 randomly selected pixel from the same location of two 100 x 100 images would possess identical colors if they were not identical is ~ 1 in 6.7 billion. However, the color spectrum is not evenly utilized, so this method would first require computing the color distribution of an image set which is beyond the scope of this post - more to come!*
 
 So assuming that a pixelated pairwise comparison is elemental to confirming image uniqueness, I concluded the only way to increase computational efficiency was to reduce the number of image pairs.
 
