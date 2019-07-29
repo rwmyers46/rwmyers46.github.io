@@ -22,13 +22,15 @@ The number of comparisons required can be computed using graph theory for a comp
 
 $$K_n = \frac{n*(n - 1)}{2}$$
 
-This equation dictates that in order to ensure 1,000 images are unique, we must process nearly half a million image pairs. Starting with $$O(N^2)$$ complexity, the processing load increases because images must be compared by pixel by pixel, across each pixel's 3 RGB color channels.
+This equation dictates that in order to ensure 1,000 images are unique, we must process nearly half a million image pairs. Starting with $$O(N^2)$$ complexity, the processing load increases because images must be compared pixel-by-pixel, across each pixel's 3 RGB color channels. To visualize this, meet my dog Jimi. In order to programmatically determine whether the images on the right and left are the same dog, each pixel must match across each color channel:
 
-*Sidenote: For the standard image encoding color depth of 24-bits, each pixel can assume one of $$2^{24} = 16,777,216$$ colors. We could exploit the low probability that a randomly selected pixel from two images would possess identical colors, at an identical location, if they were not identical, to create additional processing efficiency. However, the color spectrum is not evenly utilized, so this method would first require computing the color distribution of an image set which is beyond the scope of this post.*
+<img src="/images/optimizer/jimi_v2.jpg"/>
+
+*Sidenote: For the standard image encoding color depth of 24-bits, each pixel can assume one of $$2^{24} = 16,777,216$$ colors. We could exploit the low probability that a randomly selected pixel from two images would possess identical colors, at an identical location, if they were not in fact identical, to create additional processing efficiency. However, the color spectrum is not evenly utilized, so this method would first require computing the color distribution of an image set which is beyond the scope of this post.*
 
 So assuming that a pixelated pairwise comparison is elemental to confirming image uniqueness, I concluded the only way to increase computational efficiency was to reduce the number of image pairs.
 
-The `Image_Optimizer`'s operates by first finding each image's dimensional size, then grouping images sharing a common size, and finally compute image comparisons only with each group.
+The `Image_Optimizer` operates by finding each image's dimensional size and grouping images with equivalent sizes so that pairwise comparisons are only required within each group.
 
 Taking a list of (file_name, file_size) tuples as the argument, it first finds the number of unique sizes. These sizes are used as keys for two purposes: to create a `counts` dictionary to count the number of unique size occurrences and for a `filtered_dict` dictionary to which we will append filenames.
 
