@@ -22,7 +22,7 @@ The number of comparisons required can be computed using graph theory for a comp
 
 $$K_n = \frac{n*(n - 1)}{2}$$
 
-This equation dictates that in order to ensure 1,000 images are unique, we must process nearly half a million image pairs. Starting with $$O(N^2)$$ complexity, the processing load further increases because images must be compared pixel-by-pixel, across each pixel's 3 RGB color channels. 
+This equation dictates that in order to ensure 1,000 images are unique, we must process nearly half a million image pairs. Starting with $$O(N^2)$$ complexity, the processing load further increases because images must be compared pixel-by-pixel, across each pixel's 3 RGB color channels.
 
 To visualize this, meet my dog Jimi. In order to programmatically determine whether the images on the right and left are the same, every pixel must match across each color channel:
 
@@ -185,6 +185,6 @@ def Check_Duplicates(path):
             print('Deleted {} files.'.format(ctr))
 ```
 
-Results:
+Result:
 
 * On a test sample of 846 images, image processing requirements were reduced from 357,435 pairs for the brute force approach to 2,139 image pairs.

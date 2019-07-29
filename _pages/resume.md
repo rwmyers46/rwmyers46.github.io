@@ -2,4 +2,4 @@
 title: ""
 permalink: /resume/
 ---
-<img src="images/Russell_Myers_ResumeV2.jpg"/>
+<img src="images/Myers_Resume_July2019.pdf"/>

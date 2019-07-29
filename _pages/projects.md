@@ -20,7 +20,7 @@ author_profile: true
 
 Improved Net Promoter Scores fidelity for online reviews using NLP (Spacy, Gensim, CountVectorizer, TF-IDF), topic modeling (LDA/NMF/CorEx), sentiment analysis (VADER), and measured accuracy with Naive Bayes and Logistic Regression with data stored in MongoDB.
 
-<a href="https://github.com/rwmyers46/Net-Promoter-Score-2.0" class="btn btn--info">View on Github</a>
+<a href="https://github.com/rwmyers46/Net-Promoter-Score-2.0" class="btn btn--info">Coming Soon!</a>
 
 <hr>
 
@@ -31,7 +31,7 @@ Improved Net Promoter Scores fidelity for online reviews using NLP (Spacy, Gensi
 
 Engineered features from Kaggle Instacart dataset to classify users practicing a paleolithic diet.  Built classification model that leveraged Logistic Regression and weighted the F1 results. Data stored in PostgreSQL (AWS).
 
-<a href="https://github.com/rwmyers46/Instacart-Diet-Classification" class="btn btn--info">View on Github</a>
+<a href="https://github.com/rwmyers46/Instacart-Diet-Classification" class="btn btn--info">Coming Soon!</a>
 
 <hr>
 
