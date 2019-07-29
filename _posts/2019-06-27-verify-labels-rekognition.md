@@ -11,21 +11,21 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 * AWS Rekognition can be leveraged as an image processing utility for a variety of data science applications
 * Verifying image labels with Rekognition is a simple, time-saving hack when building neural networks
 
-The Rekognition API is an Amazon Web Services (AWS) microservice designed for computer vision applications. As part of AWS's Machine Learning suite, Rekognition provides scalable, on-demand image and video AI processing for applications. Rekognition has been successfully applied to everything from flagging adult content to facial recognition for law enforcement. So as an AWS Solutions Architect studying data science, I wanted to see if Rekognition could also help build a better convolutional neural network. *Spoiler Alert - it can!*
+The Rekognition API is an Amazon Web Services (AWS) microservice designed for computer vision applications. As part of AWS's Machine Learning suite, Rekognition provides scalable, on-demand image and video AI processing. Rekognition has been successfully applied to everything from flagging adult content to facial recognition for law enforcement. So as an AWS Solutions Architect studying data science, I wanted to see if Rekognition could also help build a better convolutional neural network. *Spoiler Alert - it can!*
 
-When building a neural network for image detection, ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy. Just as a Japanese character masquerading as the 27th letter would it confuse a child learning the English alphabet, training neural networks with mislabeled data will reduce the model's performance.
+When building a neural network for image detection, ensuring that training images are consistent with the desired label is the simplest way to increase model accuracy. Just as a Japanese character masquerading as the 27th letter would it confuse a child learning the English alphabet, training neural networks with mislabeled data will reduce a model's performance.
 
-Training neural networks for image recognition requires *at least* 800 high-quality photos per class. For example, say you're building some AI to distinguish between a deer and a wild boar, plan on gathering about 3,000 unique images - you'll find 20% are junk or redundant and need an extra 30% for the null class.
+Training neural networks for image recognition requires at least 800 high-quality photos per class. For example, if you're building some AI to distinguish between two animals, plan on gathering about 3,000 images (20% will be useless or redundant and you'll need an extra 30% for the null class).
 
-Compared with numerical or categorical data, which can be screened for inconsistent types and null values with minimal code, working with imagery is a bit trickier:
+Compared with numerical or categorical data, which can be screened for inconsistent types and null values with minimal code, working with imagery is more intricate:
 
 1. How do you know all training images are representative of your target label?
 2. Does your training imagery contain multiple instances of the target label, extraneous objects or other noise likely to confuse your model?
-3. Are there redundant images in your directory? ([related post](https://rwmyers46.github.io/image-duplicates/))
+3. Are there redundant images with unique filenames in your directory? ([solution: see related post](https://rwmyers46.github.io/image-duplicates/))
 
 Traditionally, these questions could not be confidently answered without a human manually reviewing each and every image. Oftentimes, this time-intensive, repetitive work was hired out via platforms like AWS Mechanical Turk, but even delegation takes time.
 
-So in lieu of spending a Saturday tediously reviewing thousands of training images, I decided to enlist AWS Rekognition for the task of verifying image labels. It worked flawlessly and took less than a minute.
+So in lieu of spending a weekend tediously reviewing thousands of training images, I decided to enlist AWS Rekognition for the task of verifying image labels. It worked flawlessly - and took less than a minute.
 
 <img src="/images/rekognition-2.png"/>
 <figcaption>AWS Rekognition</figcaption>  
@@ -83,7 +83,7 @@ for img in test_images:
         if label['Confidence'] > 85:
             animal_list.append(label['Name'])
 
-# creat a set of unique image labels from our test images
+# create a set of unique image labels from our test images
 
 test_labels = set(animal_list)
 
@@ -120,7 +120,7 @@ for page in result:
                     if label['Confidence'] > 85:
                         labels_list.append(label['Name'])
 ```
-In the last segment below, I also wanted to remove photos containing people. With Rekognition, this task was as simple as adding a the `('Person' in test_labels)` clause to the conditional statement.
+In the last segment below, I also wanted to remove photos containing people. With Rekognition, this task was as simple as adding the `or ('Person' in test_labels)` clause to the conditional statement.
 
 ```python
 # compare labels_list to test_labels and remove images
