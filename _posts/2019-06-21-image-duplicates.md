@@ -16,7 +16,7 @@ head: <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 
 Thousands of images are required to train robust neural networks. If redundant images are present in your training set, model accuracy will suffer. Even with a repository of unique images, a single null file may cause the build to abort with errors - after waiting through several fitting epochs. Thus, ensuring images are unique, uncorrupted, and adhere to expected file formats is imperative.
 
-Python's CV2 and OS modules can readily handle null image files; the real challenge lies in avoiding duplicate images. Even if all images within a freshly downloaded set are unique, we must ensure they do not duplicate existing images in your training directory. This can only be confirmed with a pairwise comparison of each image.
+Python's CV2 and OS modules can readily handle null image files; the real challenge lies in avoiding duplicate images. Even if all images within a freshly downloaded set are unique, we still must ensure they do not duplicate existing images in your training directory. This can only be confirmed with a pairwise comparison of each image.
 
 The number of comparisons required can be computed using graph theory for a complete, undirected graph and treating images as (n) nodes with combinations of (K) edges:
 
@@ -48,7 +48,6 @@ def Image_Optimizer(name_size):
     # find unique image size values & store in a dictionary:
 
     size_list = [n[1] for m,n in enumerate(name_size)]  
-
     poss_dupes = set(size_list)     
 
     for m, n in enumerate(name_size):

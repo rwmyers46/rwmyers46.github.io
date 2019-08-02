@@ -28,7 +28,7 @@ Compared with numerical or categorical data, which can be screened for inconsist
 
 Traditionally, these questions could not be confidently answered without a human manually reviewing each and every image. Oftentimes, this time-intensive, repetitive work was hired out via platforms like AWS Mechanical Turk, but even delegation takes time.
 
-So in lieu of spending a weekend tediously reviewing thousands of training images, I decided to enlist AWS Rekognition for the task of verifying image labels - and it worked flawlessly. 
+So in lieu of spending a weekend tediously reviewing thousands of training images, I decided to enlist AWS Rekognition for the task of verifying image labels - and it worked flawlessly.
 
 <img src="/images/rekognition-Page-1b.jpg"/>
 
@@ -36,7 +36,7 @@ So in lieu of spending a weekend tediously reviewing thousands of training image
 
 Before proceeding, install Boto 3 and separate images by label in an S3 bucket directory.
 
-In the code block below, we first instantiate `s3_client` with boto3 and set `bucket_name` to the S3 bucket containing the training imagery. If the images are in folder, we must also set the `prefix` variable to the precise path.  
+In the code block below, we first instantiate `s3_client` with boto3 and set `bucket_name` to the S3 bucket containing the training imagery. If the images are in a folder, we must also set the `prefix` variable to the file path.  
 
  ```python
   s3_client = boto3.client('s3')
