@@ -18,7 +18,7 @@ Thousands of images are required to train robust neural networks. If redundant i
 
 Python's CV2 and OS modules can readily handle null image files; the real challenge lies in avoiding duplicate images. Even if all images within a freshly downloaded set are unique, we still must ensure they do not duplicate existing images in your training directory. This can only be confirmed with a pairwise comparison of each image.
 
-The number of comparisons required can be computed using graph theory for a complete, undirected graph and treating images as (n) nodes with combinations of (K) edges:
+The number of comparisons required can be computed using [graph theory](https://en.wikipedia.org/wiki/Graph_theory) for a complete, undirected graph and treating images as (n) nodes with combinations of (K) edges:
 
 $$K_n = \frac{n*(n - 1)}{2}$$
 
