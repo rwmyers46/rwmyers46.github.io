@@ -5,7 +5,7 @@ tags: [AWS Rekognition, Python, Image Preprocessing]
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
 
-<img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="200"/>
+<img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="100"/>
 <figcaption>Photo by @jontyson on Unsplash</figcaption>
 
 * AWS Rekognition can be leveraged as an image processing utility for a variety of data science applications
