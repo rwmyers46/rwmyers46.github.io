@@ -20,7 +20,7 @@ author_profile: true
 
 Improved Net Promoter Scores fidelity for online reviews using NLP (Spacy, Gensim, CountVectorizer, TF-IDF), topic modeling (LDA/NMF/CorEx), sentiment analysis (VADER), and measured accuracy with Naive Bayes and Logistic Regression with data stored in MongoDB on AWS.
 
-<a href="https://github.com/rwmyers46/Net-Promoter-Score-2.0" class="btn btn--info">Coming Soon!</a>
+<a href="https://github.com/rwmyers46/Net-Promoter-Score-2.0" class="btn btn--info">View on Github</a>
 
 <hr>
 
