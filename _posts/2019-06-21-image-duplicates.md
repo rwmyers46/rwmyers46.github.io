@@ -38,7 +38,6 @@ Taking a list of (file_name, file_size) tuples as the argument, it first finds t
 
 ```python
 # Group images by size to increase computational efficiency:
-
 def Image_Optimizer(name_size):
 
     short_list = []
@@ -46,7 +45,6 @@ def Image_Optimizer(name_size):
     counts = dict()
 
     # find unique image size values & store in a dictionary:
-
     size_list = [n[1] for m,n in enumerate(name_size)]  
     poss_dupes = set(size_list)     
 
@@ -55,12 +53,9 @@ def Image_Optimizer(name_size):
             counts[n[1]] = counts.get(n[1], 0) + 1
 
     # remove items with values = 1 (no need to process images of unique sizes) to use as a checksum:
-
     short_list = [c for c in counts if counts[c] > 1]  
 
     # create a dictionary where keys = file size and values = lists of file names.
-    # this reduces processing by ensuring images are only compared to others within groups of identical sizes
-
     for ns in name_size:
         if ns[1] in files_investigate:
              files_investigate[ns[1]].append(ns[0])
@@ -68,7 +63,6 @@ def Image_Optimizer(name_size):
             files_investigate[ns[1]] = [ns[0]]
 
     # dictionary filters `files_investigate` for values > 1:
-
     filtered_dict = defaultdict(list)
 
     for k, v in files_investigate.items():
@@ -85,21 +79,18 @@ The `filtered_dict` of {image_dimensions : file_names list} represents a grouped
 
 ```python
 # check for redundant images in <path> directory:
-
 def Check_Duplicates(path):
 
     duplicates_list, corrupted_list, size_list, name_size = [], [], [], []
     comp_dict = {}
 
     # create list of all files in directory & check for errors:
-
     img_list = [i for i in os.listdir(path)]
 
     for i, j in enumerate(img_list):
         read = cv2.imread(path + j)
 
         # create list of tuples in filename, size format:
-
         try:
             temp = read.shape
             size_list = (j, temp)
@@ -114,11 +105,9 @@ def Check_Duplicates(path):
     print('Original image list size:', len(name_size))
 
     # optimize processing by organizing images into groups of equal size:
-
     prepped_images = Image_Optimizer(name_size)   
 
     # conduct pairwise comparison of images sharing a key:
-
     for k, v in prepped_images.items():
         v = sum(v, [])                        # flatten values list
         img_combos = it.combinations(v, 2)    # create list of pairwise combinations from values
@@ -133,7 +122,6 @@ def Check_Duplicates(path):
                 if original.shape == duplicate.shape:    # double check that image dimensions equal
 
                 # compute image differences and split by channel:
-
                     difference = cv2.subtract(original, duplicate)
                     b, g, r = cv2.split(difference)
 
@@ -159,7 +147,6 @@ def Check_Duplicates(path):
                 comp_dict[dl[0]] = [dl[1]]
 
         # compile a list of values from comp_dict to delete:
-
         dump_list = []
 
         for cd, v in comp_dict.items():
@@ -168,12 +155,10 @@ def Check_Duplicates(path):
         print('Dump List:',len(dump_list))
 
         # remove duplicate values and convert to ordered data structure
-
         dump_list = list(set(dump_list))    
         print(dump_list)
 
         # user confirmation to delete files:
-
         user_answer = input('Remove duplicate files? [y] or [n]')
 
         if user_answer == 'y':
