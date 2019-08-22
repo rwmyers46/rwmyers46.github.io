@@ -39,6 +39,6 @@ Engineered features from Kaggle Instacart dataset to classify users practicing a
 
 ![image-left](/images/cow-2.jpg){: .align-left}
 
-Scraped online property listings using BeautifulSoup and engineered features with a combination of NLP and Google Maps API to build a Multivariate Regression model for farm & ranch land valuation. Project includes use of Lasso, Ridge, ElasticNet, XGBoost, and Multilayer Perceptron regressors and hyperparameter optimization with LassoCV, RidgeCV, Yellowbrick, and GridCV.
+Developed a Multivariate Regression model for farm & ranch land valuation using data scraped from online property listings with Python / BeautifulSoup and features engineered with Natural Language Processing and Google Cloud Platform's Maps API. Project includes use of Lasso, Ridge, ElasticNet, XGBoost, and Multilayer Perceptron regressors and parameter optimization with LassoCV, RidgeCV, Yellowbrick, and GridCV.
 
 <a href="https://github.com/rwmyers46/Rural-Land-Valuation" class="btn btn--info">View on Github</a>
