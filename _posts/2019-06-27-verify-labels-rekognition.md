@@ -4,17 +4,26 @@ date: 2019-06-27
 tags: [AWS Rekognition, Python, Image Preprocessing]
 excerpt: "Amazon Web Services, Machine Learning, Data Science"
 ---
-
-<img src="/images/rekognition/photo-pile.jpg" alt="drawing" height="100"/>
-<figcaption>Photo by @jontyson on Unsplash</figcaption>
+<figure>
+  <center>
+    <img src="/images/rekognition/photo-pile.jpg" height="100"/>
+    <figcaption>Photo by @jontyson on Unsplash</figcaption>
+  </center>
+</figure>
 
 * AWS Rekognition can be leveraged as an image processing utility for a variety of data science applications
 * Verifying image labels with Rekognition is a simple, time-saving hack when building neural networks
 
 The Rekognition API is an Amazon Web Services (AWS) microservice designed for computer vision applications. As part of AWS's Machine Learning suite, Rekognition provides scalable, on-demand image and video AI processing. As an AWS Solutions Architect studying data science, I wanted to see if Rekognition could also help build a better convolutional neural network.
 
-<img src="/images/rekognition-2.png"/>
-<figcaption>AWS Rekognition</figcaption>
+
+
+<figure>
+  <img src="/images/rekognition-2.png"/>
+  <center>
+    <figcaption>Image Source: Amazon Web Services</figcaption>
+  </center>
+</figure>
 
 When building neural networks for image detection, ensuring training images are consistent with the desired label is the simplest way to increase model accuracy. Just as a Japanese character masquerading as the 27th letter would confuse a child learning the English alphabet, training neural networks with mislabeled data will reduce a model's performance.
 
@@ -30,9 +39,11 @@ Traditionally, these questions could not be confidently answered without a human
 
 So in lieu of spending a weekend tediously reviewing thousands of training images, I decided to enlist AWS Rekognition for the task of verifying image labels - and it worked flawlessly.
 
-<p align="center">
-<img src="/images/rekognition-Page-1b.jpg"/>
-</p>
+<figure>
+  <center>
+    <img src="/images/rekognition-Page-1b.jpg"/>
+  </center>
+</figure>
 
 ##### Step 1 - Instantiate S3 and Rekognition Boto3 Clients:
 

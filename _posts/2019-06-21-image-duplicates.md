@@ -7,11 +7,15 @@ mathjax: "true"
 head: <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 
 ---
+<figure>
+  <center>
+    <img src="/images/optimizer/eagle2.jpg" height="200"/>
+    <figcaption> Photo by @rayhennessy on Unsplash </figcaption>
+  </center>
+</figure>
 
-<img src="/images/optimizer/eagle2.jpg" alt="drawing" height="200"/>
-
-* Neural networks trained with duplicate images exhibit decreased accuracy
-* A brute force approach to eliminating image duplicates has exponential time complexity
+* Training neural networks with duplicate images decreases model accuracy
+* Eliminating image duplicates with a brute force approach has exponential time complexity
 * This algorithm exhibits top-level processor efficiency gain of 167x
 
 Thousands of images are required to train robust neural networks. If redundant images are present in your training set, model accuracy will suffer. Even with a repository of unique images, a single null file may cause the build to abort with errors - after waiting through several fitting epochs. Thus, ensuring images are unique, uncorrupted, and adhere to expected file formats is imperative.
