@@ -16,11 +16,9 @@ excerpt: "Amazon Web Services, Machine Learning, Data Science"
 
 The Rekognition API is an Amazon Web Services (AWS) microservice designed for computer vision applications. As part of AWS's Machine Learning suite, Rekognition provides scalable, on-demand image and video AI processing. As an AWS Solutions Architect studying data science, I wanted to see if Rekognition could also help build a better convolutional neural network.
 
-
-
 <figure>
-  <img src="/images/rekognition-2.png"/>
   <center>
+    <img src="/images/rekognition-2.png"/>
     <figcaption>Image Source: Amazon Web Services</figcaption>
   </center>
 </figure>
