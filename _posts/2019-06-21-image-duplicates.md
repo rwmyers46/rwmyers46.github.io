@@ -9,7 +9,7 @@ head: <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 ---
 <figure>
   <center>
-    <img src="/images/optimizer/eagle2.jpg" height="200"/>
+    <img src="/images/optimizer/eagle2.jpg" height="100"/>
     <figcaption> Photo by @rayhennessy on Unsplash </figcaption>
   </center>
 </figure>
