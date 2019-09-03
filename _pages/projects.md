@@ -20,7 +20,7 @@ This project built an app to explore how Natural Language Processing (NLP) could
 
 ![image-left](/images/deer.jpg){: .align-left}
 
-<p>Applied convolutional neural networks with Keras / TensorFlow to compute regional species classification using imagery from wildlife cameras and Microsoft Cognitive Services API. Data stored in S3, cleaned with AWS Rekognition, processed on EC2 GPU, and visualized with Tableau.</p>
+<p>Applied convolutional neural networks with Keras / TensorFlow to compute regional species classification using imagery from Texas wildlife cameras and Microsoft Cognitive Services API. Data were stored in S3, [cleaned with AWS Rekognition](https://rwmyers46.github.io/verify-labels-rekognition/), processed on EC2 GPU, and presented with Tableau. The deployed model's functionality demonstrated text notifications to mobile devices using AWS SNS when species were positively identified.  </p>
 
 <a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
 
