@@ -49,6 +49,7 @@ Developed a Multivariate Regression model for farm & ranch land valuation using 
 
 ![image-left](/images/app_screenshot2.png){: .align-left}
 
-This project investigated how Natural Language Processing (NLP) could be leveraged to discover insights that complement traditional market mapping. With data sourced from Crunchbase, NLP & Vectorization were to applied to company descriptions in the Artificial Intelligence / Machine Learning sector to establish and plot their relative market proximity.
+This project built an app to explore how Natural Language Processing (NLP) could be leveraged to discover insights that complement traditional market mapping. NLP & Vectorization were applied to company descriptions sourced from Crunchbase in the Artificial Intelligence / Machine Learning sector to establish and plot relative market proximity. Language preparation & processing utilized spaCy, NLTK, CountVectorizer, LDA, t-distributed Stochastic Neighbor Embedding (T-SNE), and TfidfVectorizer. The visualization was built using Bokeh running on Flask and deployed with Heroku.
 
 <a href="https://ai-ventures.herokuapp.com/" class="btn btn--info">Try on Heroku!</a>
+<a href="https://github.com/rwmyers46/Venture-Market-Proximity" class="btn btn--info">View on Github</a>
