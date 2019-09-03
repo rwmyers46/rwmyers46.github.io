@@ -4,6 +4,18 @@ permalink: /projects/
 title: "Projects"
 author_profile: true
 ---
+
+<h3>Visualizing Venture Markets with NLP</h3>
+
+![image-left](/images/app_screenshot2.png){: .align-left}
+
+This project built an app to explore how Natural Language Processing (NLP) could be leveraged to discover insights that complement traditional market mapping. NLP & Vectorization were applied to data sourced from Crunchbase in the Artificial Intelligence / Machine Learning sector to establish and plot relative market proximity. Language preparation & processing utilized spaCy, NLTK, CountVectorizer, LDA, t-distributed Stochastic Neighbor Embedding (T-SNE), and TfidfVectorizer. The visualization was built using Bokeh running on Flask and deployed with Heroku.
+
+<a href="https://github.com/rwmyers46/Venture-Market-Proximity" class="btn btn--info">View on Github</a>
+<a href="https://ai-ventures.herokuapp.com/" class="btn btn--success">Try on Heroku</a>
+
+<hr>
+
 <h3>Species Identification with Convolutional Neural Networks</h3>
 
 ![image-left](/images/deer.jpg){: .align-left}
@@ -42,15 +54,3 @@ Engineered features from Kaggle Instacart dataset to classify users practicing a
 Developed a Multivariate Regression model for farm & ranch land valuation using data scraped from online property listings with Python / BeautifulSoup and features engineered with Natural Language Processing and Google Cloud Platform's Maps API. Project includes use of Lasso, Ridge, ElasticNet, XGBoost, and Multilayer Perceptron regressors and parameter optimization with LassoCV, RidgeCV, Yellowbrick, and GridCV.
 
 <a href="https://github.com/rwmyers46/Rural-Land-Valuation" class="btn btn--info">View on Github</a>
-
-<hr>
-
-<h3>Visualizing Venture Markets with NLP</h3>
-
-![image-left](/images/app_screenshot2.png){: .align-left}
-
-This project built an app to explore how Natural Language Processing (NLP) could be leveraged to discover insights that complement traditional market mapping. NLP & Vectorization were applied to data sourced from Crunchbase in the Artificial Intelligence / Machine Learning sector to establish and plot relative market proximity. Language preparation & processing utilized spaCy, NLTK, CountVectorizer, LDA, t-distributed Stochastic Neighbor Embedding (T-SNE), and TfidfVectorizer. The visualization was built using Bokeh running on Flask and deployed with Heroku.
-
-<a href="https://github.com/rwmyers46/Venture-Market-Proximity" class="btn btn--info">View on Github</a>
-
-<a href="https://ai-ventures.herokuapp.com/" class="btn btn--success">Try on Heroku</a>
