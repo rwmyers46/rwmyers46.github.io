@@ -42,3 +42,13 @@ Engineered features from Kaggle Instacart dataset to classify users practicing a
 Developed a Multivariate Regression model for farm & ranch land valuation using data scraped from online property listings with Python / BeautifulSoup and features engineered with Natural Language Processing and Google Cloud Platform's Maps API. Project includes use of Lasso, Ridge, ElasticNet, XGBoost, and Multilayer Perceptron regressors and parameter optimization with LassoCV, RidgeCV, Yellowbrick, and GridCV.
 
 <a href="https://github.com/rwmyers46/Rural-Land-Valuation" class="btn btn--info">View on Github</a>
+
+<hr>
+
+<h3>Visualizing Venture Markets with NLP</h3>
+
+![image-left](/images/app_screenshot.png){: .align-left}
+
+This project investigated how Natural Language Processing (NLP) could be leveraged to discover insights that complement traditional market mapping. With data sourced from Crunchbase, NLP & Vectorization were to applied to company descriptions in the Artificial Intelligence / Machine Learning sector to establish and plot their relative market proximity.
+
+<a href="https://ai-ventures.herokuapp.com/" class="btn btn--info">Try on Heroku!</a>
