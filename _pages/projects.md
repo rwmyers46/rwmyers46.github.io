@@ -47,7 +47,7 @@ Developed a Multivariate Regression model for farm & ranch land valuation using 
 
 <h3>Visualizing Venture Markets with NLP</h3>
 
-![image-left](/images/app_screenshot.png){: .align-left}
+![image-left](/images/app_screenshot2.png){: .align-left}
 
 This project investigated how Natural Language Processing (NLP) could be leveraged to discover insights that complement traditional market mapping. With data sourced from Crunchbase, NLP & Vectorization were to applied to company descriptions in the Artificial Intelligence / Machine Learning sector to establish and plot their relative market proximity.
 
