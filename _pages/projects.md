@@ -9,7 +9,7 @@ author_profile: true
 
 ![image-left](/images/app_screenshot2.png){: .align-left}
 
-This project built an app to explore how Natural Language Processing (NLP) could be leveraged to discover insights that complement traditional market mapping. NLP & Vectorization were applied to data sourced from Crunchbase in the Artificial Intelligence / Machine Learning sector to establish and plot relative market proximity. Language preparation & processing utilized spaCy, NLTK, CountVectorizer, LDA, t-distributed Stochastic Neighbor Embedding (T-SNE), and TfidfVectorizer. The visualization was built using Bokeh running on Flask and deployed with Heroku.
+This project built an app to explore how Natural Language Processing (NLP) could be leveraged to discover insights that complement traditional market mapping. NLP & Vectorization were applied to data sourced from Crunchbase in the Artificial Intelligence / Machine Learning sectors to establish and plot relative market proximity. Language preparation & processing utilized spaCy, NLTK, CountVectorizer, LDA, t-distributed Stochastic Neighbor Embedding (T-SNE), and TfidfVectorizer. The visualization was built using Bokeh running on Flask and deployed with Heroku.
 
 <a href="https://github.com/rwmyers46/Venture-Market-Proximity" class="btn btn--info">View on Github</a>
 <a href="https://ai-ventures.herokuapp.com/" class="btn btn--success">Try on Heroku</a>
@@ -20,7 +20,7 @@ This project built an app to explore how Natural Language Processing (NLP) could
 
 ![image-left](/images/deer.jpg){: .align-left}
 
-<p>Applied convolutional neural networks with Keras / TensorFlow to compute regional species classification using imagery from Texas wildlife cameras and Microsoft Cognitive Services API. Data were stored in S3, [cleaned with AWS Rekognition](https://rwmyers46.github.io/verify-labels-rekognition/), processed on EC2 GPU, and presented with Tableau. The deployed model's functionality demonstrated text notifications to mobile devices using AWS SNS when species were positively identified.  </p>
+<p>Applied convolutional neural networks with Keras / TensorFlow to compute regional species classification using imagery from Texas wildlife cameras and Microsoft Cognitive Services API. Data were stored in S3, <a href="https://rwmyers46.github.io/verify-labels-rekognition/">verified with AWS Rekognition</a>, processed on EC2 GPU, and presented with Tableau. The deployed model's functionality demonstrated text notifications to mobile devices using AWS SNS when species were positively identified.  </p>
 
 <a href="https://github.com/rwmyers46/CNN-Species-Identification" class="btn btn--info">View on Github</a>
 
