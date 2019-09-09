@@ -5,7 +5,7 @@ title: "Projects"
 author_profile: true
 ---
 
-<h3>Visualizing Venture Markets with Natural Language Processing</h3>
+<h3>Visualizing Markets with Natural Language Processing</h3>
 
 ![image-left](/images/app_screenshot2.png){: .align-left}
 
