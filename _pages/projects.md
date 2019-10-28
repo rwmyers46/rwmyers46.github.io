@@ -9,7 +9,7 @@ author_profile: true
 
 ![image-left](/images/app_screenshot2.png){: .align-left}
 
-Built a Flask app to visually explore the AI & Machine Learning startup competitive market landscape using Natural Language Processing (NLP). Complementing traditional market mapping, this tool applies NLP and Vectorization to Crunchbase data in the Artificial Intelligence + Machine Learning sectors to compute relative market proximity from company descriptions. Language preparation & processing utilized spaCy, NLTK, CountVectorizer, LDA, t-distributed Stochastic Neighbor Embedding (T-SNE), and TfidfVectorizer. Visualization was built using Bokeh running on Flask and deployed with Heroku.
+ Deployed a Flask app with Heroku to visually discover insights in the AI & Machine Learning startup market using Natural Language Processing. Using Crunchbase data, NLP and Dimensionality Reduction were applied to company descriptions / categories to create an interactive app to explore competitor proximity with Bokeh. Language preparation & processing utilized spaCy, NLTK, CountVectorizer, LDA, t-distributed Stochastic Neighbor Embedding (T-SNE), and TfidfVectorizer.
 
 <a href="https://github.com/rwmyers46/Venture-Market-Proximity" class="btn btn--info">View on Github</a>
 <a href="https://ai-ventures.herokuapp.com/" class="btn btn--success">Try on Heroku</a>
