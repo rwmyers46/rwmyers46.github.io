@@ -1,6 +1,6 @@
 ---
 title: "PDF Text Extraction with Python"
-date: 2020-03-11
+date: 2020-01-11
 tags: [Data Extraction, Python, PDF Processing]
 excerpt: "Data Extraction, Python, PDF Processing"
 ---
