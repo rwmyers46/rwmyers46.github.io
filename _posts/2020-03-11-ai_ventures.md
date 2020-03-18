@@ -1,5 +1,5 @@
 ---
-title: "Marketing with NLP"
+title: "Natural Language Processing for Competitive Market Analysis"
 date: 2020-03-11
 tags: [Venture Capital, Data Science, Marketing Technology]
 excerpt: "Visualize competitive market landscapes with Natural Language Processing"
