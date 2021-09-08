@@ -108,13 +108,13 @@ analytics:
 author:
   name             : "Russell W. Myers"
   avatar           : "/images/RWM.jpg"
-  bio              : "Data Science Portfolio"
-  location         : "Dallas, TX"
+  bio              : "Data Scientist"
+  location         : "Boulder, CO"
   email            :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto: rwmyers46@gmail.com"
+    #- label: "Email"
+    #  icon: "fas fa-fw fa-envelope-square"
+    #  url: "mailto: rwmyers46@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
