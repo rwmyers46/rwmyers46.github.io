@@ -5,6 +5,17 @@ title: "Projects"
 author_profile: true
 ---
 
+<h3>Anything British</h3>
+
+![image-left](/images/anything-brit-header.png){: .align-left}
+
+Applied Bayesian methods to explore the relationship between musical talent and national origin using <a href='https://mkt.tableau.com/Public/Datasets/Spotify_Daily_Streaming.csv.zip'> Spotify's Daily Streaming</a> dataset of 8.5M records. Features engineered by combining GCP's Custom Search Engine with <a href ='https://spacy.io/'> spaCy's </a> Named Entity Recognition (NER) feature.
+
+<a href="https://github.com/rwmyers46/Anything-British" class="btn btn--info">View on Github</a>
+<a href="https://public.tableau.com/app/profile/russell.w.myers/viz/WhatsintheWater/Dashboard1" class="btn btn--success">Tableau Visualizations</a>
+
+<hr>
+
 <h3>Visualizing Markets with Natural Language Processing</h3>
 
 ![image-left](/images/app_screenshot2.png){: .align-left}
@@ -36,6 +47,16 @@ Improved Net Promoter Scores fidelity for online reviews using NLP (Spacy, Gensi
 
 <hr>
 
+<h3>Rural Land Valuation</h3>
+
+![image-left](/images/cow-2.jpg){: .align-left}
+
+Developed a Multivariate Regression model for farm & ranch land valuation using data scraped from online property listings with Python / BeautifulSoup and features engineered with Natural Language Processing and Google Cloud Platform's Maps API. Project includes use of Lasso, Ridge, ElasticNet, XGBoost, and Multilayer Perceptron regressors and parameter optimization with LassoCV, RidgeCV, Yellowbrick, and GridCV.
+
+<a href="https://github.com/rwmyers46/Rural-Land-Valuation" class="btn btn--info">View on Github</a>
+
+<hr>
+
 <h3>You Are What You Eat! Predicting Diets from Instacart Orders</h3>
 
 ![image-left](/images/paleo-image-2.jpg){: .align-left}
@@ -44,13 +65,3 @@ Improved Net Promoter Scores fidelity for online reviews using NLP (Spacy, Gensi
 Engineered features from Kaggle Instacart dataset to classify users practicing a paleolithic diet.  Built classification model that leveraged Logistic Regression and weighted the F1 results. Data stored in PostgreSQL (AWS).
 
 <a href="https://github.com/rwmyers46/Instacart-Diet-Classification" class="btn btn--info">Coming Soon!</a>
-
-<hr>
-
-<h3>Rural Land Valuation</h3>
-
-![image-left](/images/cow-2.jpg){: .align-left}
-
-Developed a Multivariate Regression model for farm & ranch land valuation using data scraped from online property listings with Python / BeautifulSoup and features engineered with Natural Language Processing and Google Cloud Platform's Maps API. Project includes use of Lasso, Ridge, ElasticNet, XGBoost, and Multilayer Perceptron regressors and parameter optimization with LassoCV, RidgeCV, Yellowbrick, and GridCV.
-
-<a href="https://github.com/rwmyers46/Rural-Land-Valuation" class="btn btn--info">View on Github</a>
