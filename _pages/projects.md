@@ -24,7 +24,7 @@ Applied Bayesian methods to explore the relationship between musical talent and 
 
 <a href="https://github.com/rwmyers46/Venture-Market-Proximity" class="btn btn--info">View on Github</a>
 <a href="https://ai-ventures.herokuapp.com/" class="btn btn--success">Try on Heroku</a>
-<a href='https://medium.com/@rwmyers46/marketing-with-nlp-765f4c607104' class='btn btn--primary'>Medium Article</a>
+<a href="https://medium.com/@rwmyers46/marketing-with-nlp-765f4c607104" class="btn btn--primary">Medium Article</a>
 
 <hr>
 
