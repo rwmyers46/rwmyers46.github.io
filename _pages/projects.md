@@ -42,7 +42,7 @@ Applied Bayesian methods to explore the relationship between musical talent and 
 
 ![image-left](/images/nps-guage-2.jpg){: .align-left}
 
-Improved Net Promoter Scores fidelity for online reviews using NLP (Spacy, Gensim, CountVectorizer, TF-IDF), topic modeling (LDA/NMF/CorEx), sentiment analysis (VADER), and measured accuracy with Naive Bayes and Logistic Regression with data stored in MongoDB on AWS.
+Modernized the *Net Promoter Score* metric for online reviews using NLP (Spacy, Gensim, CountVectorizer, TF-IDF), topic modeling (LDA/NMF/CorEx), sentiment analysis (VADER), Naive Bayes and Logistic Regression. The Amazon Customer Reviews Dataset of 130M records was stored in MongoDB format on AWS EC2.
 
 <a href="https://github.com/rwmyers46/Net-Promoter-Score-2.0" class="btn btn--info">View on Github</a>
 
